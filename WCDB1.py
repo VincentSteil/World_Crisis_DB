@@ -7,6 +7,6 @@ import sys
 import xml.etree.ElementTree as ET
 from cStringIO import StringIO
 strr = sys.stdin.read()
-tree = ET.parse(StringIO(strr)) #where to import from
+tree = ET.parse(StringIO(strr)) #importing the XML
 root = tree.getroot()
-print ET.tostring(root)
+print ET.tostring(root) #printing the result to the console
