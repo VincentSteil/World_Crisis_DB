@@ -3,9 +3,10 @@ WCDB1.py
 Group project
 Lab 3
 """
-
+import sys
 import xml.etree.ElementTree as ET
-tree = ET.parse('country_data.xml') #where to import from
+from cStringIO import StringIO
+strr = sys.stdin.read()
+tree = ET.parse(StringIO(strr)) #where to import from
 root = tree.getroot()
-print root;
-tree.write('bum.xml') # where to export to
+print ET.tostring(root)
