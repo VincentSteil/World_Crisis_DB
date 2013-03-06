@@ -16,4 +16,4 @@ To document the program
 import sys
 from WCDB1 import WCDB1_run
 
-WCDB1_run
+WCDB1_run(sys.stdin, sys.stdout)

@@ -9,7 +9,8 @@ from cStringIO import StringIO
 
 
 def WCBD_print(w, tree):
-  w.write(tree)
+  w.write(tree) #printing to .out file
+  
 def WCDB1_run(r ,w):
   """
   r is a reader
@@ -17,9 +18,9 @@ def WCDB1_run(r ,w):
   """
   #strr = sys.stdin.read()
   strr = r
-  tree = ET.parse(StringIO(strr)) #importing the XML
+  tree = ET.parse(strr) #importing the XML
   root = tree.getroot()
   
-  #print ET.tostring(root)
+  #print ET.tostring(root) #printing the result to the console
   
-  WCDB_print(w, ET.tostring(root)) #printing the result to the console
+  WCBD_print(w, ET.tostring(root)) #sending tree to the printer
