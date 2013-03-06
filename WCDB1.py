@@ -16,7 +16,7 @@ from cStringIO import StringIO
 # WCDB_print
 # -------------
 
-def WCBD_print(w, tree):
+def WCDB1_print(w, tree):
   """
   This function prints tree to writer w
   w is a writer
@@ -39,4 +39,4 @@ def WCDB1_run(r ,w):
   strr = r.read()
   tree = ET.parse(StringIO(strr)) #importing the XML
   root = tree.getroot()
-  WCBD_print(w, ET.tostring(root)) #sending tree to the printer
+  WCDB1_print(w, ET.tostring(root)) #sending tree to the printer

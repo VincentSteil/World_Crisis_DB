@@ -9,7 +9,7 @@
 import StringIO
 import unittest
 
-from WCDB1 import WCDB1_run
+from WCDB1 import WCDB1_run, WCDB1_print
 
 # -----------
 # TestXML
@@ -37,6 +37,28 @@ class TestWCDB1 (unittest.TestCase) :
         w = StringIO.StringIO('')
         WCDB1_run(r, w)
         self.assert_(r.getvalue() == w.getvalue())
+
+    # ----
+    # print
+    # ----
+
+    def test_print1 (self) :
+        r = "abc"
+        w = StringIO.StringIO('')
+        WCDB1_print(w, r)
+        self.assert_(r == w.getvalue())
+
+    def test_print2 (self) :
+        r = "Test\n"
+        w = StringIO.StringIO('')
+        WCDB1_print(w, r)
+        self.assert_(r == w.getvalue())
+        
+    def test_print3 (self) :
+        r = "This is a long sentence. Hey!\n And another one! \n"
+        w = StringIO.StringIO('')
+        WCDB1_print(w, r)
+        self.assert_(r == w.getvalue())
 
 # ----
 # main
