@@ -16,11 +16,8 @@ def WCDB1_run(r ,w):
   r is a reader
   w is a writer
   """
-  #strr = sys.stdin.read()
+ 
   strr = r
   tree = ET.parse(strr) #importing the XML
   root = tree.getroot()
-  
-  #print ET.tostring(root) #printing the result to the console
-  
   WCBD_print(w, ET.tostring(root)) #sending tree to the printer
