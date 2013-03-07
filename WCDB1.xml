@@ -32,6 +32,7 @@
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
 			<Organization oID="CC0001"/>
+			<Organization oID="CC0004"/>
 		</Organizations>
 		
 		<People>
@@ -41,7 +42,7 @@
 		
 	</Crisis>
 	
-	<Crisis cID="CC0001">
+	<Crisis cID="CC0002">
 		<Info>
 			<Name>2010 Chile Earthquake</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -68,7 +69,8 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="Required oID"/>
+			<Organization oID="CC0003"/>
+			<Organization oID="CC00010"/>
 		</Organizations>
 		
 		<People>
@@ -106,6 +108,8 @@
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
 			<Organization oID="CC0001"/>
+			<Organization oID="CC0002"/>
+			<Organization oID="CC0007"/>
 		</Organizations>
 		
 		<People>
@@ -182,6 +186,7 @@
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
 			<Organization oID="CC0001"/>
+			<Organization oID="CC0005"/>
 		</Organizations>
 		
 		<People>
@@ -217,7 +222,7 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="Required oID"/>
+			<Organization oID="CC0006"/>
 		</Organizations>
 		
 		<People>
@@ -330,7 +335,7 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="Required oID"/>
+			<Organization oID="CC0002"/>
 		</Organizations>
 		
 		<People>
@@ -368,7 +373,8 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="Required oID"/>
+			<Organization oID="CC0002"/>
+			<Organization oID="CC0007"/>
 		</Organizations>
 		
 		<People>
@@ -423,6 +429,237 @@
 		
 	</Organization>
 	
+	
+	<Organization oID="CC0002">
+		<Info>
+			<Name>Red Cross</Name>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>Humanitarian Aid</Kind>
+			<Description>Famous international humanitarian aid organisation.</Description>
+			<Location>
+				<City>Washington DC</City>
+				<State>Maryland</State>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1919-01-01</StartDate>
+			</Date>
+		</Info>
+		<History>It has helped out in most major world crises.</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://www.redcross.org/</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Logo">http://www.bghealthservices.com/wp-content/uploads/2011/10/american-red-cross.jpg</Image>
+			<Video title="Song">https://www.youtube.com/watch?v=z0b83hXXTmk</Video>
+			<Social network="Twitter">https://twitter.com/RedCross</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CC0010"/>
+			<Crisis cID="CC0009"/>
+			<Crisis cID="CC0003"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Organization>
+		
+	<Organization oID="CC0003">
+		<Info>
+			<Name>Christian Aid</Name>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>Humanitarian Aid</Kind>
+			<Description>They provide humanitarian aid and development.</Description>
+			<Location>
+				<City>London</City>
+				<Country>UK</Country>
+			</Location>
+			<Date>
+				<StartDate>1945-12-31</StartDate>
+			</Date>
+		</Info>
+		<History>Founded in the aftermath of WW2 by the UK and Irish Church</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://www.christianaid.org.uk/aboutus/contact/index.aspx</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Logo">http://www.livefortheoutdoors.com/upload/536096/Christian-Aid.jpg</Image>
+			<Video title="Christian Aid on Poverty">https://www.youtube.com/watch?v=kLBZl4FzOww</Video>
+			<Map title="HQ">http://goo.gl/pevOy</Map>
+			<Social network="Twitter">https://twitter.com/christian_aid</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CC0002"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+		</People>
+		
+	</Organization>
+
+	<Organization oID="CC0004">
+		<Info>
+			<Name>Central Intelligence Agency</Name>
+			<Abbreviation>CIA</Abbreviation>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>Intelligence Agency</Kind>
+			<Description>Founded after WW2 to act as the US foreign spy organisation.</Description>
+			<Location>
+				<City>Langley</City>
+				<State>Virginia</State>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1947-09-18</StartDate>
+			</Date>
+		</Info>
+		<History>Founded after WW2 to act as the US foreign spy organisation.</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website> https://www.cia.gov/index.html</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="CIA Logo">https://upload.wikimedia.org/wikipedia/commons/2/23/CIA.svg</Image>
+			<Video title="BBC Video on the CIA">https://www.youtube.com/watch?v=cHAwbYpRGkQ</Video>
+			<Map title="HQ">http://goo.gl/maps/n7h0c</Map>
+			<Social network="Other">https://www.cia.gov/news-information/your-news/cia-press-releases-statements/RSS.xml</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CC0001"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="CC0001"/>
+		</People>
+		
+	</Organization>
+	
+	<Organization oID="CC0005">
+		<Info>
+			<Name>Federal Emergency Management Agency</Name>
+			<Abbreviation>FEMA</Abbreviation>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>Disaster Response</Kind>
+			<Description>Founded as US government arm dedicated to local disaster relief.</Description>
+			<Location>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1978-06-19</StartDate>
+			</Date>
+		</Info>
+		<History>Founded as US government arm dedicated to local disaster relief.</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://www.fema.gov/</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="FEMA Logo">http://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/US-FEMA-Pre2003Seal.svg/200px-US-FEMA-Pre2003Seal.svg.png</Image>
+			<Video title="FEMA Video">https://www.youtube.com/watch?v=jB-5f_XcS2A</Video>
+			<Map title="HQ">http://goo.gl/GD1Lc</Map>
+			<Social network="Twitter">https://twitter.com/fema</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CC0005"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Organization>
+	
+	<Organization oID="CC0006">
+		<Info>
+			<Name>National Guard of the United States</Name>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>Military Organisation</Kind>
+			<Description>Military reserve of the US.</Description>
+			<Location>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1903-01-23</StartDate>
+			</Date>
+		</Info>
+		<History>Founded 1903 as the US reserve military force.</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://www.nationalguard.com/</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="National Guard Logo">http://www.jmu.edu/rotc/images/nationalguard.png</Image>
+			<Video title="Basic Weapons Training">https://www.youtube.com/watch?v=jPN-hSraZHc</Video>
+			<Social network="Twitter">https://twitter.com/NationalGuard</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CC0006"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="CC0001"/>
+		</People>
+		
+	</Organization>
+	
+	<Organization oID="CC0007">
+		<Info>
+			<Name>Save the Children</Name>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>Humanitarian Aid</Kind>
+			<Description>Provides Humanitarian Aid with a Focus on Children</Description>
+			<Location>
+				<City>London</City>
+				<Country>UK</Country>
+			</Location>
+			<Date>
+				<StartDate>1919-04-15</StartDate>
+			</Date>
+		</Info>
+		<History>The Save the Children Fund was founded in London, England, on April 15, 1919 by Eglantyne Jebb and her sister Dorothy Buxton as an effort to alleviate starvation of children in Germany and Austria-Hungary during the Allied blockade of Germany of World War I which continued after the Armistice.</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://www.savethechildren.org/site/c.8rKLIXMGIpI4E/b.6115947/k.8D6E/Official_Site.htm</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="StC Logo">http://upload.wikimedia.org/wikipedia/en/5/59/Save_the_Children_logo.svg</Image>
+			<Video title="StC User">https://www.youtube.com/user/savethechildrenuk</Video>
+			<Map title="HQ">http://goo.gl/Klblj</Map>
+			<Social network="Twitter">https://twitter.com/SavetheChildren</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CC0010"/>
+			<Crisis cID="CC0002"/>
+			<Crisis cID="CC0003"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Organization>
 	<!-- ALL  THE OTHER ORGANIZATIONS-->
 	
 	<Person pID="CC0001">
@@ -455,6 +692,8 @@
 		<Organizations>
 			<!-- Repeate Organization up to 10 times -->
 			<Organization oID="CC0001"/>
+			<Organization oID="CC0004"/>
+			<Organization oID="CC0006"/>
 		</Organizations>		
 		
 		<Crises>
