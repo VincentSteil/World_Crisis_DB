@@ -35,8 +35,9 @@ def WCDB1_run(r ,w):
   r is a reader
   w is a writer
   """
- 
+
   strr = r.read()
+  assert len(strr)>0
   tree = ET.parse(StringIO(strr)) #importing the XML
   root = tree.getroot()
   WCDB1_print(w, ET.tostring(root)) #sending tree to the printer
