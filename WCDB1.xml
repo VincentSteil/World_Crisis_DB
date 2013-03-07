@@ -41,6 +41,343 @@
 		
 	</Crisis>
 	
+	<Crisis cID="CC0001">
+		<Info>
+			<Name>2010 Chile Earthquake</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Natural Disaster</Kind>
+			<Description>A strong earthquake 3km off the coast of Pellhue</Description>
+			<Location>
+				<Country>Chile</Country>
+			</Location>
+			<Date>
+				<StartDate>2010-02-27</StartDate>
+			</Date>
+		</Info>
+		<HumanImpact>525 dead, 25 missing</HumanImpact>
+		<EconomicImpact>30 billion USD</EconomicImpact>
+		<ResourcesNeeded>Foreigh Aid, money, temporary housing</ResourcesNeeded>
+		<WaysToHelp>Donations</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Collapsed building">http://gaiaworld.wikispaces.com/file/view/2010-Chile-Earthquake-81.jpg/206096962/2010-Chile-Earthquake-81.jpg</Image>
+			<Video title="12th floor">https://www.youtube.com/watch?v=ItkgEkiX-vw</Video>
+			<Map title="Epicenter">http://upload.wikimedia.org/wikipedia/commons/8/8e/2010_Chile_earthquake_epicenter.png</Map>
+			<Social network="Twitter">https://twitter.com/huffingtonpost/chile-earthquake</Social>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="Required oID"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Crisis>
+	
+	<Crisis cID="CC0003">
+		<Info>
+			<Name>2010 Haiti Earthquake</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Natural Disaster</Kind>
+			<Description>Earthquake off the coast of Haiti</Description>
+			<Location>
+				<Country>Haiti</Country>
+			</Location>
+			<Date>
+				<StartDate>2010-01-12</StartDate>
+			</Date>
+		</Info>
+		<HumanImpact>316000 dead</HumanImpact>
+		<EconomicImpact>14 billion USD</EconomicImpact>
+		<ResourcesNeeded>Food, housing, medicine, money</ResourcesNeeded>
+		<WaysToHelp>Donations</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Collapsed Houses">http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/haiti_01_13/h38_21698163.jpg</Image>
+			<Video title="Post-Earthquake Montage">https://www.youtube.com/watch?v=V_s4UMLm8LM</Video>
+			<Map title="Epicenter">http://upload.wikimedia.org/wikipedia/en/0/0c/Haiti_earthquake_map.png</Map>
+			<Social network="Twitter">https://twitter.com/nprnews/haiti-earthquake</Social>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="CC0001"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Crisis>
+	
+	<Crisis cID="CC0004">
+		<Info>
+			<Name>Berlin Blockade</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Blockade</Kind>
+			<Description>Stalin tried to starve West Berlin by closing all roads into the city.</Description>
+			<Location>
+				<City>Berlin</City>
+				<State>Berlin</State>
+				<Country>Germany</Country>
+			</Location>
+			<Date>
+				<StartDate>1948-06-24</StartDate>
+				<EndDate>1949-05-12</EndDate>
+			</Date>
+		</Info>
+		<HumanImpact>O</HumanImpact>
+		<EconomicImpact>224-500 million $ (2.19-4.88 billion adjusted for inflation)</EconomicImpact>
+		<ResourcesNeeded>Cargo Planes, Food, Coal, General Supplies, Medicine</ResourcesNeeded>
+		<WaysToHelp>Join an allied airforce, fly cargo planes</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Landing Plane">https://upload.wikimedia.org/wikipedia/commons/d/d8/C-54landingattemplehof.jpg</Image>
+			<Video title="Airlift Documentary">https://www.youtube.com/watch?v=_nHdB1vJNsg</Video>
+			<Map title="Berlin">http://goo.gl/maps/Cjzzj</Map>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="CC0001"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Crisis>
+	
+	<Crisis cID="CC0005">
+		<Info>
+			<Name>Hurricane Andrew</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Natural Disaster</Kind>
+			<Description>A hurricane sweeping over the US.</Description>
+			<Location>>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1992-08-16</StartDate>
+				<EndDate>1992-08-28</EndDate>
+			</Date>
+		</Info>
+		<HumanImpact>26 dead</HumanImpact>
+		<EconomicImpact>26.5 billion USD</EconomicImpact>
+		<ResourcesNeeded>Food, housing, medicine, money</ResourcesNeeded>
+		<WaysToHelp>Donate</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Weather Map">http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/HurricaneAndrew.jpg/220px-HurricaneAndrew.jpg</Image>
+			<Video title="TV Coverage">https://www.youtube.com/watch?v=HAhJqNkNcC0</Video>
+			<Map title="Hurricane Path">http://www.nhc.noaa.gov/outreach/history/andrew_1992_map.gif</Map>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="CC0001"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Crisis>
+	
+	<Crisis cID="CC0006">
+		<Info>
+			<Name>Hurricane Carla</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Natural Disaster</Kind>
+			<Description>A hurricane hitting the US</Description>
+			<Location>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1961-09-16</StartDate>
+			</Date>
+		</Info>
+		<HumanImpact>43 dead</HumanImpact>
+		<EconomicImpact>325.74 million USD</EconomicImpact>
+		<ResourcesNeeded>Food, shelter</ResourcesNeeded>
+		<WaysToHelp>Volunteer, donate</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Satellite Picture">http://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Hurricane_Carla_Satellite.JPG/220px-Hurricane_Carla_Satellite.JPG</Image>
+			<Video title="US Weather Bureau Film">https://www.youtube.com/watch?v=SMjueXVV_z0</Video>
+			<Map title="Hurricane Map">http://eo.ucar.edu/webweather/images/hurricane_carla_map2.gif</Map>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="Required oID"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="CC0001"/>
+		</People>
+		
+	</Crisis>
+	
+	<Crisis cID="CC0007">
+		<Info>
+			<Name>Hurricane Emily</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Natural Disaster</Kind>
+			<Description>Hurricane Emily hits the US</Description>
+			<Location>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1993-08-22</StartDate>
+				<EndDate>1993-09-06</EndDate>
+			</Date>
+		</Info>
+		<HumanImpact>3 dead</HumanImpact>
+		<EconomicImpact>50 million USD</EconomicImpact>
+		<ResourcesNeeded>Food, shelter, medicine</ResourcesNeeded>
+		<WaysToHelp>Donate, volunteer</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Satellite Picture">http://upload.wikimedia.org/wikipedia/commons/9/9b/Hurricane_Emily_31_aug_1993_2059Z.jpg</Image>
+			<Video title="Footage">https://www.youtube.com/watch?v=onMh2jsMKHk</Video>
+			<Map title="Travelled Path">http://ks.water.usgs.gov/pubs/reports/wsp.2499.fig78.gif</Map>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="Required oID"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Crisis>
+	
+	<Crisis cID="CC0008">
+		<Info>
+			<Name>Hurricane Hugo</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Natural Disaster</Kind>
+			<Description>Hurricane Hugo hits the US</Description>
+			<Location>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1989-09-10</StartDate>
+				<EndDate>1989-09-25</EndDate>
+			</Date>
+		</Info>
+		<HumanImpact>107 dead</HumanImpact>
+		<EconomicImpact>10 billion USD</EconomicImpact>
+		<ResourcesNeeded>Food, shelter, medicine</ResourcesNeeded>
+		<WaysToHelp>Donate, Volunteer</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Satellite Picture">http://upload.wikimedia.org/wikipedia/commons/2/2e/Hurricane_Hugo_1989_sept_21_1844Z.jpg</Image>
+			<Video title="Footage">https://www.youtube.com/watch?v=yD5-Yo4Kc0s</Video>
+			<Map title="Travelled Path">http://www.nhc.noaa.gov/outreach/history/hugo_1989_map.gif</Map>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="Required oID"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Crisis>
+	
+	<Crisis cID="CC0009">
+		<Info>
+			<Name>2008 Mumbai Attack</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Terrorist Attack</Kind>
+			<Description>Terrorists attacked Mumbai</Description>
+			<Location>
+				<City>Mumbai</City>
+				<Country>India</Country>
+			</Location>
+			<Date>
+				<StartDate>2008-11-26</StartDate>
+				<EndDate>2008-11-29</EndDate>
+			</Date>
+		</Info>
+		<HumanImpact>166 dead</HumanImpact>
+		<EconomicImpact>10 million USD</EconomicImpact>
+		<ResourcesNeeded>Better security, psychotherapists, money</ResourcesNeeded>
+		<WaysToHelp>Bring justice to the terrorists</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Firefight">http://i.telegraph.co.uk/multimedia/archive/01123/mumbai-end460_1123340c.jpg</Image>
+			<Video title="Eyewittness of Attack">https://www.youtube.com/watch?v=VDt8e3YuWOk</Video>
+			<Map title="Locations">http://en.wikipedia.org/wiki/File:2008_Mumbai_attacks.svg</Map>
+			<Social network="Twitter">https://twitter.com/MumbaiAttacks</Social>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="Required oID"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Crisis>
+	
+	<Crisis cID="CC0010">
+		<Info>
+			<Name>Pakistan Floods</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Natural Disaster</Kind>
+			<Description>Terrible floods in Pakistan</Description>
+			<Location>
+				<Country>Pakistan</Country>
+			</Location>
+			<Date>
+				<StartDate>2010-07-26</StartDate>
+			</Date>
+		</Info>
+		<HumanImpact>1781 dead</HumanImpact>
+		<EconomicImpact>43 billion USD</EconomicImpact>
+		<ResourcesNeeded>Food, medicine, shelter</ResourcesNeeded>
+		<WaysToHelp>Donate, volunteer</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Satellite Image">http://en.wikipedia.org/wiki/File:Pakistan_2010_Floods.jpg</Image>
+			<Video title="Flood Victim">www.youtube.com/watch?v=JUMmUNWqM68</Video>
+			<Map title="Flood Extent">http://en.wikipedia.org/wiki/File:Indus_flooding_2010_en.svg</Map>
+			<Social network="Twitter">https://twitter.com/pkfloodsappeal</Social>
+			<Citations>http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3441151/</Citations>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="Required oID"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="Required pID"/>
+		</People>
+		
+	</Crisis>
+	
 	<!-- ALL THE OTHER CRISES -->
 	
 	<Organization oID="CC0001">
