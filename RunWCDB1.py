@@ -3,7 +3,7 @@
 To run the program
     % python RunWCDB1.py < RunWCDB1.in.xml > RunWCDB1.out.xml
     % chmod ugo+x RunCollatz.py
-    % RunCollatz.py < RunCollatz.in > RunCollatz.out
+    % RunWCDB1.py < RunWCDB1.in.xml > RunWCDB1.out.xml
 
 To document the program
     % pydoc -w WCDB1
