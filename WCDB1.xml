@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<WorldCrisesDatabase>
+	
+	<Crisis cID="CC0001">
+		<Info>
+			<Name>U-2 Incident</Name>
+			<Abbreviation>U-2</Abbreviation>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Foreign Politics Scandal</Kind>
+			<Description>A US U-2 spy plane was shot down in Soviet airspace while spying on the USSR. The pilot was then presented as proof to the world in a conference.</Description>
+			<Location>
+				<City>Degtyarsk</City>
+				<Country>USSR</Country>
+			</Location>
+			<Date>
+				<StartDate>1960-05-01</StartDate>
+			</Date>
+		</Info>
+		<HumanImpact>No immediate casualties.</HumanImpact>
+		<EconomicImpact>Unquantifiable</EconomicImpact>
+		<ResourcesNeeded>Foreign relations capital and a new U-2 spy plane.</ResourcesNeeded>
+		<WaysToHelp>Keep a cool head and don't let it end in a nuclear holocaust.</WaysToHelp>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Khrushchev looks at the shot down U-2 plane">https://upload.wikimedia.org/wikipedia/commons/8/84/Khrushchev_U2.gif</Image>
+			<Video title="Khrushchev on Gary Powers">https://www.youtube.com/watch?v=Eaf6cydnJG0</Video>
+			<Map title="Degtyarsk">http://goo.gl/maps/CrBAC</Map>
+			<Social network="Facebook">https://www.facebook.com/pages/U2-spy-plane-incident/112844092098673?sk=wall</Social>
+			<Citations>Powers, Francis Gary (1970). Operation Overflight (Hodder and Stoughton Ltd, 1971 (hard cover) ISBN 978-0-340-14823-5 ed.).</Citations>
+		</External>
+		
+		<Organizations>
+			<!-- Repeat Organization up to 10 times -->
+			<Organization oID="CC0001"/>
+		</Organizations>
+		
+		<People>
+			<!-- Repeat Person up to 10 times -->
+			<Person pID="CC0001"/>
+		</People>
+		
+	</Crisis>
+	
+	<!-- ALL THE OTHER CRISES -->
+	
+	<Organization oID="CC0001">
+		<Info>
+			<Name>United States Air Force</Name>
+			<Abbreviation>USAF</Abbreviation>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>Military Organisation</Kind>
+			<Description>The air force employed by the US military.</Description>
+			<Location>
+				<AddressLine>1400 Defense Pentagon</AddressLine>
+				<City>Washington DC</City>
+				<State>Maryland</State>
+				<Country>United States</Country>
+				<Postal>20301</Postal>
+			</Location>
+			<Date>
+				<StartDate>1947-09-18</StartDate>
+			</Date>
+		</Info>
+		<History>The USAF was officially established in 1947 and aided the rest of the US military in all consequent wars and major conflicts.</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://www.airforce.com/</Website>
+			<Telephone>(210) 565-2334</Telephone>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="USAF logo">https://upload.wikimedia.org/wikipedia/commons/2/23/Seal_of_the_US_Air_Force.svg</Image>
+			<Video title="What it's like">http://www.airforce.com/see-what-its-like/</Video>
+			<Map title="The Pentagon">http://goo.gl/maps/d1MhQ</Map>
+			<Social network="Twitter">https://twitter.com/AFPAA</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CC0001"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="CC0001"/>
+		</People>
+		
+	</Organization>
+	
+	<!-- ALL  THE OTHER ORGANIZATIONS-->
+	
+	<Person pID="CC0001">
+		<Info>
+			<Name>Dwight Eisenhower</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Head of State</Kind>
+			<Description>34th President of the United States.</Description>
+			<Location>
+				<Country>United States</Country>
+			</Location>
+			<Date>
+				<StartDate>1890-10-14</StartDate>
+				<EndDate>1969-03-28</EndDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://www.whitehouse.gov/about/presidents/dwightdeisenhower</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Portrait">https://upload.wikimedia.org/wikipedia/commons/6/63/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959.jpg</Image>
+			<Video title="The Military Industrial Complex">https://www.youtube.com/watch?v=8y06NSBBRtY</Video>
+			<Map title="The White House">http://goo.gl/maps/0XQr9</Map>
+			<Social network="Facebook">https://www.facebook.com/pages/Dwight-D-Eisenhower/20931263978</Social>
+			<Citations>"Biography: Dwight David Eisenhower". Eisenhower Foundation. Retrieved May 23, 2008.</Citations>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+			<Organization oID="CC0001"/>
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CC0001"/>
+		</Crises>		
+
+	</Person>
+
+	<!-- ALL  THE OTHER PEOPLE -->
+
+
+</WorldCrisesDatabase>
