@@ -1,0 +1,16 @@
+Hurricane Emily
+Kind: Natural Disaster
+Location: U.S.
+Date: August 1993
+Human impact: 3 dead
+Economic impact: $50 million
+Resources needed: Food, housing, medicine, money
+Ways to help: The Red Cross
+Image URLs: http://upload.wikimedia.org/wikipedia/commons/9/9b/Hurricane_Emily_31_aug_1993_2059Z.jpgHurricaneAndrew.jpg
+Video URLs: https://www.youtube.com/watch?v=onMh2jsMKHk
+Map URLs: http://ks.water.usgs.gov/pubs/reports/wsp.2499.fig78.gif
+Social Networks feeds: n/a
+Citations: http://en.wikipedia.org/wiki/Hurricane_Emily_(1993)
+External links URLs: http://www.aoml.noaa.gov/hrd/prelim/Emily_prelim.html
+Organizations: National Guard of the United States, American Red Cross, FEMA, The Salvation Army
+People: Wallace Stickney

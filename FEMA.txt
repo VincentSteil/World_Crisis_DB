@@ -1,0 +1,13 @@
+FEMA
+Kind: Disaster Response
+Location: Washington, D.C., U.S.
+History: Established in 1978
+Contact info: http://www.fema.gov/
+Image URLs: http://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/US-FEMA-Pre2003Seal.svg/200px-US-FEMA-Pre2003Seal.svg.png
+Video URLs: https://www.youtube.com/watch?v=jB-5f_XcS2A
+Map URLs: https://maps.google.com/maps?q=FEMA&aq=f&um=1&ie=UTF-8&hl=en&sa=N&tab=wl
+Social feeds URLs: https://twitter.com/fema
+Citations: http://en.wikipedia.org/wiki/Federal_Emergency_Management_Agency
+External link URLs: http://arcweb.archives.gov/arc/action/ExternalIdSearch?id=783&jScript=true
+Crises: Hurricane Andrew
+People: 
