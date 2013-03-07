@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <WorldCrisesDatabase>
 	
-	<Crisis cID="CC0001">
+	<Crisis cID="UI1960">
 		<Info>
 			<Name>U-2 Incident</Name>
 			<Abbreviation>U-2</Abbreviation>
@@ -26,23 +26,23 @@
 			<Video title="Khrushchev on Gary Powers">https://www.youtube.com/watch?v=Eaf6cydnJG0</Video>
 			<Map title="Degtyarsk">http://goo.gl/maps/CrBAC</Map>
 			<Social network="Facebook">https://www.facebook.com/pages/U2-spy-plane-incident/112844092098673?sk=wall</Social>
-			<Citations>Powers, Francis Gary (1970). Operation Overflight (Hodder and Stoughton Ltd, 1971 (hard cover) ISBN 978-0-340-14823-5 ed.).</Citations>
+			<Citation>Powers, Francis Gary (1970). Operation Overflight (Hodder and Stoughton Ltd, 1971 (hard cover) ISBN 978-0-340-14823-5 ed.).</Citation>
 		</External>
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="CC0001"/>
-			<Organization oID="CC0004"/>
+			<Organization oID="AF1947"/>
+			<Organization oID="CI1947"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="CC0001"/>
+			<Person pID="DE1890"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0002">
+	<Crisis cID="CE2010">
 		<Info>
 			<Name>2010 Chile Earthquake</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -69,18 +69,19 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="CC0003"/>
-			<Organization oID="CC00010"/>
+			<Organization oID="UN1945"/>
+			<Organization oID="CA1945"/>
+			<Organization oID="SA1865"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="MB1951"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0003">
+	<Crisis cID="HE2010">
 		<Info>
 			<Name>2010 Haiti Earthquake</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -107,19 +108,21 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="CC0001"/>
-			<Organization oID="CC0002"/>
-			<Organization oID="CC0007"/>
+			<Organization oID="AF1947"/>
+			<Organization oID="RC1919"/>
+			<Organization oID="UN1945"/>
+			<Organization oID="SA1865"/>
+			<Organization oID="SC1919"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="GM1952"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0004">
+	<Crisis cID="BB1948">
 		<Info>
 			<Name>Berlin Blockade</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -148,23 +151,23 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="CC0001"/>
+			<Organization oID="AF1947"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="JS1878"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0005">
+	<Crisis cID="HA1992">
 		<Info>
 			<Name>Hurricane Andrew</Name>
 			<!-- Repeate Kind element as many times as needed-->
 			<Kind>Natural Disaster</Kind>
 			<Description>A hurricane sweeping over the US.</Description>
-			<Location>>
+			<Location>
 				<Country>US</Country>
 			</Location>
 			<Date>
@@ -185,18 +188,21 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="CC0001"/>
-			<Organization oID="CC0005"/>
+			<Organization oID="AF1947"/>
+			<Organization oID="NG1903"/>
+			<Organization oID="RC1919"/>
+			<Organization oID="FE1978"/>
+			<Organization oID="SA1865"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="WS1934"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0006">
+	<Crisis cID="HC1961">
 		<Info>
 			<Name>Hurricane Carla</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -222,17 +228,18 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="CC0006"/>
+			<Organization oID="RC1919"/>
+			<Organization oID="SA1865"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="CC0001"/>
+			<Person pID="DE1890"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0007">
+	<Crisis cID="HE1993">
 		<Info>
 			<Name>Hurricane Emily</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -259,17 +266,20 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="Required oID"/>
+			<Organization oID="NG1903"/>
+			<Organization oID="RC1919"/>
+			<Organization oID="FE1978"/>
+			<Organization oID="SA1865"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="WS1934"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0008">
+	<Crisis cID="HH1989">
 		<Info>
 			<Name>Hurricane Hugo</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -296,17 +306,19 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="Required oID"/>
+			<Organization oID="NG1903"/>
+			<Organization oID="RC1919"/>
+			<Organization oID="SA1865"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="WS1934"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0009">
+	<Crisis cID="MA2008">
 		<Info>
 			<Name>2008 Mumbai Attack</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -335,17 +347,18 @@
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="CC0002"/>
+			<Organization oID="UN1945"/>
+			<Organization oID="RC1919"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="SR1960"/>
 		</People>
 		
 	</Crisis>
 	
-	<Crisis cID="CC0010">
+	<Crisis cID="PF2010">
 		<Info>
 			<Name>Pakistan Floods</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -368,25 +381,28 @@
 			<Video title="Flood Victim">www.youtube.com/watch?v=JUMmUNWqM68</Video>
 			<Map title="Flood Extent">http://en.wikipedia.org/wiki/File:Indus_flooding_2010_en.svg</Map>
 			<Social network="Twitter">https://twitter.com/pkfloodsappeal</Social>
-			<Citations>http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3441151/</Citations>
+			<Citation>http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3441151/</Citation>
 		</External>
 		
 		<Organizations>
 			<!-- Repeat Organization up to 10 times -->
-			<Organization oID="CC0002"/>
-			<Organization oID="CC0007"/>
+			<Organization oID="UN1945"/>
+			<Organization oID="WH1947"/>
+			<Organization oID="RC1919"/>
+			<Organization oID="SA1865"/>
 		</Organizations>
 		
 		<People>
 			<!-- Repeat Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="BM1944"/>
+			<Person pID="SR1960"/>
 		</People>
 		
 	</Crisis>
 	
 	<!-- ALL THE OTHER CRISES -->
 	
-	<Organization oID="CC0001">
+	<Organization oID="AF1947">
 		<Info>
 			<Name>United States Air Force</Name>
 			<Abbreviation>USAF</Abbreviation>
@@ -420,17 +436,19 @@
 		
 		<Crises>
 			<!-- Repeate Crisis up to 10 times -->
-			<Crisis cID="CC0001"/>
+			<Crisis cID="UI1960"/>
+			<Crisis cID="HE2010"/>
+			<Crisis cID="BB1947"/>
+			<Crisis cID="HA1992"/>
 		</Crises>		
 		<People>
 			<!-- Repeate Person up to 10 times -->
-			<Person pID="CC0001"/>
+			<Person pID="DE1890"/>
 		</People>
 		
 	</Organization>
 	
-	
-	<Organization oID="CC0002">
+	<Organization oID="RC1919">
 		<Info>
 			<Name>Red Cross</Name>
 			<!-- Repeat Kind element as many times as needed-->
@@ -459,18 +477,21 @@
 		
 		<Crises>
 			<!-- Repeate Crisis up to 10 times -->
-			<Crisis cID="CC0010"/>
-			<Crisis cID="CC0009"/>
-			<Crisis cID="CC0003"/>
+			<Crisis cID="PF2010"/>
+			<Crisis cID="MA2008"/>
+			<Crisis cID="HE2010"/>
+			<Crisis cID="HA1992"/>
+			<Crisis cID="HE1993"/>
+			<Crisis cID="HH1989"/>
 		</Crises>		
 		<People>
 			<!-- Repeate Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="GM1952"/>
 		</People>
 		
 	</Organization>
 		
-	<Organization oID="CC0003">
+	<Organization oID="CA1945">
 		<Info>
 			<Name>Christian Aid</Name>
 			<!-- Repeat Kind element as many times as needed-->
@@ -499,7 +520,7 @@
 		
 		<Crises>
 			<!-- Repeate Crisis up to 10 times -->
-			<Crisis cID="CC0002"/>
+			<Crisis cID="CE2010"/>
 		</Crises>		
 		<People>
 			<!-- Repeate Person up to 10 times -->
@@ -507,7 +528,7 @@
 		
 	</Organization>
 
-	<Organization oID="CC0004">
+	<Organization oID="CI1947">
 		<Info>
 			<Name>Central Intelligence Agency</Name>
 			<Abbreviation>CIA</Abbreviation>
@@ -538,16 +559,16 @@
 		
 		<Crises>
 			<!-- Repeate Crisis up to 10 times -->
-			<Crisis cID="CC0001"/>
+			<Crisis cID="UI1960"/>
 		</Crises>		
 		<People>
 			<!-- Repeate Person up to 10 times -->
-			<Person pID="CC0001"/>
+			<Person pID="DE1890"/>
 		</People>
 		
 	</Organization>
 	
-	<Organization oID="CC0005">
+	<Organization oID="FE1978">
 		<Info>
 			<Name>Federal Emergency Management Agency</Name>
 			<Abbreviation>FEMA</Abbreviation>
@@ -576,16 +597,18 @@
 		
 		<Crises>
 			<!-- Repeate Crisis up to 10 times -->
-			<Crisis cID="CC0005"/>
+			<Crisis cID="HA1992"/>
+			<Crisis cID="HE1993"/>
+			<Crisis cID="HH1989"/>
 		</Crises>		
 		<People>
 			<!-- Repeate Person up to 10 times -->
-			<Person pID="Required pID"/>
+			<Person pID="WS1934"/>
 		</People>
 		
 	</Organization>
 	
-	<Organization oID="CC0006">
+	<Organization oID="NG1903">
 		<Info>
 			<Name>National Guard of the United States</Name>
 			<!-- Repeat Kind element as many times as needed-->
@@ -612,16 +635,18 @@
 		
 		<Crises>
 			<!-- Repeate Crisis up to 10 times -->
-			<Crisis cID="CC0006"/>
+			<Crisis cID="HA1992"/>
+			<Crisis cID="HE1993"/>
+			<Crisis cID="HH1989"/>
 		</Crises>		
 		<People>
 			<!-- Repeate Person up to 10 times -->
-			<Person pID="CC0001"/>
+			<Person pID="DE1890"/>
 		</People>
 		
 	</Organization>
 	
-	<Organization oID="CC0007">
+	<Organization oID="SC1919">
 		<Info>
 			<Name>Save the Children</Name>
 			<!-- Repeat Kind element as many times as needed-->
@@ -650,9 +675,9 @@
 		
 		<Crises>
 			<!-- Repeate Crisis up to 10 times -->
-			<Crisis cID="CC0010"/>
-			<Crisis cID="CC0002"/>
-			<Crisis cID="CC0003"/>
+			<Crisis cID="PF2010"/>
+			<Crisis cID="CE2010"/>
+			<Crisis cID="HE2010"/>
 		</Crises>		
 		<People>
 			<!-- Repeate Person up to 10 times -->
@@ -660,9 +685,135 @@
 		</People>
 		
 	</Organization>
+	
+	<Organization oID="SA1865">
+		<Info>
+			<Name>The Salvation Army</Name>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>Charitable Organisation</Kind>
+			<Description>Charity that helps the poor.</Description>
+			<Location>
+				<City>London</City>
+				<Country>UK</Country>
+			</Location>
+			<Date>
+				<StartDate>1865-05-26</StartDate>
+			</Date>
+		</Info>
+		<History>Founded as Protestant charity for the poor in 1865.</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://www.salvationarmy.org/</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Salvation Army Logo">http://upload.wikimedia.org/wikipedia/en/c/c4/The_Salvation_Army.svg</Image>
+			<Video title="Salvation Army User">https://www.youtube.com/user/salvationarmytoday</Video>
+			<Social network="Twitter">https://twitter.com/salvationarmy</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CE2010"/>
+			<Crisis cID="HE2010"/>
+			<Crisis cID="HA1992"/>
+			<Crisis cID="HC1961"/>
+			<Crisis cID="HE1993"/>
+			<Crisis cID="HH1989"/>
+			<Crisis cID="PF2010"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="LB1946"/>
+		</People>
+		
+	</Organization>
+	
+	<Organization oID="UN1945">
+		<Info>
+			<Name>United Nations</Name>
+			<Abbreviation>UN</Abbreviation>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>International Forum</Kind>
+			<Description>International forum for foreign politics and matters concerning the world at large.</Description>
+			<Location>
+				<City>NYC</City>
+				<State>New York</State>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1945-06-26</StartDate>
+			</Date>
+		</Info>
+		<History>International forum for foreign politics and matters concerning the world at large. Established to prevent further world wars after WW2.</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://un.org</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="UN Flag">http://en.wikipedia.org/wiki/File:Flag_of_the_United_Nations.svg</Image>
+			<Video title="UN Peacemaking">http://goo.gl/4TdcP</Video>
+			<Map title="UN Members">http://en.wikipedia.org/wiki/File:United_Nations_Members.svg</Map>
+			<Social network="Twitter">http://en.wikipedia.org/wiki/United_Nations</Social>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="MA2008"/>
+			<Crisis cID="PF2010"/>
+			<Crisis cID="CE2010"/>
+			<Crisis cID="HE2010"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="BM1944"/>
+		</People>
+		
+	</Organization>
+	
+	<Organization oID="WH1948">
+		<Info>
+			<Name>World Health Organisation</Name>
+			<Abbreviation>WHO</Abbreviation>
+			<!-- Repeat Kind element as many times as needed-->
+			<Kind>UN Agenda</Kind>
+			<Description>UN offshoot concerned with public health</Description>
+			<Location>
+				<City>Geneva</City>
+				<Country>Switzerland</Country>
+			</Location>
+			<Date>
+				<StartDate>1948-04-07</StartDate>
+			</Date>
+		</Info>
+		<History>The League of Nations Health Organization was established following the First World War inside the League of Nations framework. According to the League's Covenant, it was to "endeavour to take steps in matters of international concern for the prevention and control of disease, even in cases of dire human hardship".</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://who.int</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="WHO Flag">http://en.wikipedia.org/wiki/File:Flag_of_WHO.svg</Image>
+			<Video title="Diesel danger: fumes cause cancer - WHO">https://www.youtube.com/watch?v=b5U2ztXCUGw</Video>
+			<Map title="WHO Coverage">http://en.wikipedia.org/wiki/File:World_Health_Organization.png</Map>
+			<Social network="Twitter">https://twitter.com/WHO</Social>
+			<Link title="WHO Homepage">http://www.who.int/en/</Link>
+		</External>
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="PF2010"/>
+		</Crises>		
+		<People>
+			<!-- Repeate Person up to 10 times -->
+			<Person pID="BM1944"/>
+		</People>
+		
+	</Organization>
 	<!-- ALL  THE OTHER ORGANIZATIONS-->
 	
-	<Person pID="CC0001">
+	<Person pID="DE1890">
 		<Info>
 			<Name>Dwight Eisenhower</Name>
 			<!-- Repeate Kind element as many times as needed-->
@@ -686,7 +837,7 @@
 			<Video title="The Military Industrial Complex">https://www.youtube.com/watch?v=8y06NSBBRtY</Video>
 			<Map title="The White House">http://goo.gl/maps/0XQr9</Map>
 			<Social network="Facebook">https://www.facebook.com/pages/Dwight-D-Eisenhower/20931263978</Social>
-			<Citations>"Biography: Dwight David Eisenhower". Eisenhower Foundation. Retrieved May 23, 2008.</Citations>
+			<Citation>"Biography: Dwight David Eisenhower". Eisenhower Foundation. Retrieved May 23, 2008.</Citation>
 		</External>
 		
 		<Organizations>
@@ -699,6 +850,350 @@
 		<Crises>
 			<!-- Repeate Crisis up to 10 times -->
 			<Crisis cID="CC0001"/>
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="BM1944">
+		<Info>
+			<Name>Ban Ki-moon</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Head of an International Organisation</Kind>
+			<Description>Secretary General of the UN since 2007</Description>
+			<Location>
+				<Country>South Korea</Country>
+			</Location>
+			<Date>
+				<StartDate>1944-06-13</StartDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Ban Ki-moon Portrait">http://en.wikipedia.org/wiki/File:Ban_Ki-moon_1-2.jpg</Image>
+			<Video title="Psy teaches Ban Ki-moon 'Gangnam Style'">https://www.youtube.com/watch?v=1fsZnIcZoA4</Video>
+			<Map title="North Chungcheong-Eumseong">http://en.wikipedia.org/wiki/File:North_Chungcheong-Eumseong.svg</Map>
+			<Social network="Twitter">https://twitter.com/secgen</Social>
+			<Link title="Wikipedia Entry">http://en.wikipedia.org/wiki/Ban_Ki-moon</Link>
+			<Citation>http://www.un.org/sg/biography.shtml</Citation>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+			<Organization oID="UN1945"/>
+			<Organization oID="WH1948"/>
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="PF2010"/>
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="CP1945">
+		<Info>
+			<Name>Charles R. Perrin</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Chairman</Kind>
+			<Description>Chairman for Save the Children</Description>
+			<Location>
+				<City>London</City>
+				<Country>UK</Country>
+			</Location>
+			<Date>
+				<StartDate>1945-01-01</StartDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Charles Perrin Portrait">http://www.arcs.qmul.ac.uk/council/Images/Charles_Perrin.jpg</Image>
+			<Video title="The Icon of Organic Chemistry: Charles Perrin">https://www.youtube.com/watch?v=MlQ7mTGfuIo</Video>
+			<Link title="Forbes Profile">http://www.forbes.com/profile/charles-perrin/</Link>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+			<Organization oID="SC1919"/>
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="HE2010"/>
+			<Crisis cID="CE2010"/>
+			<Crisis cID="PF2010"/>
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="GM1952">
+		<Info>
+			<Name>Gail McGovern</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>CEO</Kind>
+			<Description>Gail J.McGovern became President and CEO of the American Red Cross on June 23, 2008. </Description>
+			<Location>
+				<City>Washington DC</City>
+				<State>Maryland</State>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1952-01-01</StartDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Portrait">http://redcrossyouth.files.wordpress.com/2008/04/gailmcgovern.jpg</Image>
+			<Video title=" Hurricane Irene (August 2011): Interview with Gail McGovern">https://www.youtube.com/watch?v=LaS5WK7BXqc</Video>
+			<Map title="Red Cross HQ">http://goo.gl/r5K2C</Map>
+			<Social network="Twitter">https://twitter.com/RedCross</Social>
+			<Link title="Red Cross Homepage">h</Link>
+			<Citation>http://en.wikipedia.org/wiki/Gail_J._McGovern</Citation>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+			<Organization oID="RC1919"/>
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="HE2010"/>
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="JS1878">
+		<Info>
+			<Name>Joseph Stalin</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Head of State</Kind>
+			<Description>Leader of the USSR from 1922 to 1952</Description>
+			<Location>
+				<City>Moscow</City>
+				<Country>USSR</Country>
+			</Location>
+			<Date>
+				<StartDate>1878-12-18</StartDate>
+				<EndDate>1952-10-16</EndDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Stalin's Portrait">https://upload.wikimedia.org/wikipedia/commons/9/9b/CroppedStalin1943.jpg</Image>
+			<Video title=" Joseph Stalin: Red Terror ">https://www.youtube.com/watch?v=QF_fOHjWJMo</Video>
+			<Map title="The Kremlin">http://goo.gl/maps/2Vsyl</Map>
+			<Link title="Wikipedia Entry">https://en.wikipedia.org/wiki/Joseph_Stalin</Link>
+			<Citation>Service, Robert (2005) Stalin: A Biography. p. 172 ISBN 978-0-330-41913-0</Citation>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="BB1948"/>
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="LB1946">
+		<Info>
+			<Name>Linda Bond</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>General</Kind>
+			<Description>General of the Salvation Army</Description>
+			<Location>
+				<City>London</City>
+				<Country>UK</Country>
+			</Location>
+			<Date>
+				<StartDate>1946-06-22</StartDate>
+			</Date>
+		</Info>
+		<History>Optional string</History>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>https://twitter.com/GenLindaBond</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Linda Bond's Portrait">http://www.sawiki.net/images/b/b6/Linda_Bond_3.jpg</Image>
+			<Video title="General Linda Bond--International Leader Salvation Army ">https://www.youtube.com/watch?v=vLV3IOfUg6g</Video>
+			<Social network="Twitter">https://twitter.com/GenLindaBond</Social>
+			<Link title="Salvation Army Wiki">http://www.sawiki.net/index.php/Linda_Bond</Link>
+			<Citation>http://en.wikipedia.org/wiki/Linda_Bond</Citation>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+			<Organization oID="SA1865"/>
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="MB1951">
+		<Info>
+			<Name>Michelle Bachelet</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Head of State</Kind>
+			<Description>President of Chile since 2006</Description>
+			<Location>
+				<City>Santiago</City>
+				<Country>Chile</Country>
+			</Location>
+			<Date>
+				<StartDate>1951-09-29</StartDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>https://twitter.com/Bacheletjeria</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Michelle Bachelet's Portrait">http://upload.wikimedia.org/wikipedia/commons/c/c8/Michele_Bachelet_%282009%29.jpg</Image>
+			<Video title=" Chilean president appeals for help">https://www.youtube.com/watch?v=i8I9w3F753A</Video>
+			<Map title="Santiago, Chile">http://goo.gl/X8kPs</Map>
+			<Social network="Twitter">https://twitter.com/Bacheletjeria</Social>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="CE2010"/>
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="SR1960">
+		<Info>
+			<Name>Sherry Rehman</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Ambassador</Kind>
+			<Description>Pakistani Ambassador to the UN</Description>
+			<Location>
+				<Country>Pakistan</Country>
+			</Location>
+			<Date>
+				<StartDate>1960-12-21</StartDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+			<Website>http://sherryrehman.com</Website>
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Sherry Rehman Profile">http://www.forumpakistan.com/images/celebrity-profiles/Sherry-rehman-4.jpg</Image>
+			<Video title=" A Public Address by Her Excellency Sherry Rehman Ambassador of Pakistan to the UN">https://www.youtube.com/watch?v=GmI84ruGcqA</Video>
+			<Map title="Pakistan Sindh">http://en.wikipedia.org/wiki/File:Location_map_Pakistan_Sindh.png</Map>
+			<Social network="Twitter">https://twitter.com/sherryrehman</Social>
+			<Link title="Sherry Rehman's Website">http://sherryrehman.com/</Link>
+			<Citation>http://sherryrehman.com/?page_id=2</Citation>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="PF2010"/>
+			<Crisis cID="MA2008"/>
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="WS1934">
+		<Info>
+			<Name>Wallace Stickney</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Director</Kind>
+			<Description>Director of FEMA</Description>
+			<Location>
+				<City>Washington DC</City>
+				<Country>US</Country>
+			</Location>
+			<Date>
+				<StartDate>1934-11-24</StartDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Portrait">http://upload.wikimedia.org/wikipedia/commons/thumb/6/60/James_Lee_Witt,_official_FEMA_photo_portrait.jpg/200px-James_Lee_Witt,_official_FEMA_photo_portrait.jpg</Image>
+			<Map title="FEMA HQ">http://goo.gl/yCtJH</Map>
+			<Link title="FEMA Website">http://www.fema.gov/</Link>
+			<Citation>http://en.wikipedia.org/wiki/Wallace_E._Stickney</Citation>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+			<Organization oID="FE1978"/>
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="HH1989"/>
+			<Crisis cID="HE1993"/>
+			<Crisis cID="HA1992"/>
+		</Crises>		
+
+	</Person>
+	
+	<Person pID="WB1918">
+		<Info>
+			<Name>Willy Brandt</Name>
+			<!-- Repeate Kind element as many times as needed-->
+			<Kind>Head of State</Kind>
+			<Kind>Mayor</Kind>
+			<Description>Head of State of Germany and May of Berlin</Description>
+			<Location>
+				<City>Berlin</City>
+				<Country>West Germany</Country>
+			</Location>
+			<Date>
+				<StartDate>1913-12-18</StartDate>
+				<EndDate>1992-10-08</EndDate>
+			</Date>
+		</Info>
+		<ContactInfo>
+			<!-- all Contactinfo sub-elements occur 1 time and are optional-->
+		</ContactInfo>
+		<External>
+			<!-- Repeate any External sub-element as needed-->
+			<Image title="Willy Brandt">https://upload.wikimedia.org/wikipedia/commons/b/bd/Bundesarchiv_B_145_Bild-F064862-0019%2C_Dortmund%2C_SPD-Parteitag%2C_Willy_Brandt.jpg</Image>
+			<Video title="Willy Brandt - Eine Jahrhundertgestalt">https://www.youtube.com/watch?v=qVRb0dow1VA</Video>
+			<Map title="Berlin">http://goo.gl/maps/J1Gk8</Map>
+			<Link title="Wikipedia Entry">https://en.wikipedia.org/wiki/Willy_Brandt</Link>
+			<Citation>Lars Brandt, Andenken (ISBN 3-446-20710-4)</Citation>
+		</External>
+		
+		<Organizations>
+			<!-- Repeate Organization up to 10 times -->
+		</Organizations>		
+		
+		<Crises>
+			<!-- Repeate Crisis up to 10 times -->
+			<Crisis cID="BB1948"/>
 		</Crises>		
 
 	</Person>
