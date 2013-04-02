@@ -14,6 +14,23 @@ from cStringIO import StringIO
 import _mysql
 
 # -------------
+# login
+# -------------
+
+def login () :
+    in1 = raw_input('Host: ')
+    in2 = raw_input('Username: ')
+    in3 = raw_input('Password: ')
+    in4 = raw_input('Database: ')
+    c = _mysql.connect(
+            host = "z",
+            user = "<username>",
+            passwd = "<password>",
+            db = "downing_test")
+    assert str(type(c)) == "<type '_mysql.connection'>"
+    return c
+
+# -------------
 # WCDB_print
 # -------------
 
