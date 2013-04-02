@@ -23,10 +23,10 @@ def login () :
     in3 = raw_input('Password: ')
     in4 = raw_input('Database: ')
     c = _mysql.connect(
-            host = "z",
-            user = "<username>",
-            passwd = "<password>",
-            db = "downing_test")
+            host = in1,
+            user = in2,
+            passwd = in3,
+            db = in4)
     assert str(type(c)) == "<type '_mysql.connection'>"
     print "OK connection"
     return c
