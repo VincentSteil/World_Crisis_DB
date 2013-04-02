@@ -28,6 +28,7 @@ def login () :
             passwd = "<password>",
             db = "downing_test")
     assert str(type(c)) == "<type '_mysql.connection'>"
+    print "OK connection"
     return c
 
 # -------------
@@ -60,3 +61,4 @@ def WCDB2_run(r ,w):
   root = tree.getroot()
   WCDB1_print(w, ET.tostring(root)) #sending tree to the printer
 
+login()
