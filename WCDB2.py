@@ -137,7 +137,7 @@ def WCDB2_setup(c):
 
 def WCDB2_import(c, root):
   """
-  This function sets up the MySQL database that we will use
+  This function imports the XML instance to the MySQL database
   c is a mysql connection
   tree is an ElementTree
   """
@@ -155,7 +155,11 @@ def WCDB2_import(c, root):
       if i.tag=="Kind":
         tup["Kind"]=i.attrib.values()[0]
       elif len(i) == 0 :
-        tup[i.tag]+=i.text
+        if i.text != None:
+          if type(tup[i.tag])==list:
+            tup[i.tag]+=[i.text]
+          else:
+            tup[i.tag]+=i.text
       elif i.tag=="Location":
         temp=dict()
         for j in i.iter():
@@ -199,7 +203,11 @@ def WCDB2_import(c, root):
       if i.tag=="Kind":
         tup["Kind"]=i.attrib.values()[0]
       elif len(i) == 0 :
-        tup[i.tag]+=i.text
+        if i.text != None:
+          if type(tup[i.tag])==list:
+            tup[i.tag]+=[i.text]
+          else:
+            tup[i.tag]+=i.text
       elif i.tag=="Location":
         temp=dict()
         for j in i.iter():
@@ -238,7 +246,11 @@ def WCDB2_import(c, root):
       if i.tag=="Kind":
         tup["Kind"]=i.attrib.values()[0]
       elif len(i) == 0 :
-        tup[i.tag]+=i.text
+        if i.text != None:
+          if type(tup[i.tag])==list:
+            tup[i.tag]+=[i.text]
+          else:
+            tup[i.tag]+=i.text
       elif i.tag=="Location":
         temp=dict()
         for j in i.iter():
@@ -308,7 +320,7 @@ def WCDB2_import(c, root):
 
 def WCDB2_export(c):
   """
-  This function sets up the MySQL database that we will use
+  This function exports the MySQL database to XML file
   c is a mysql connection
   """
   ret = ET.Element("WorldCrises")
@@ -529,7 +541,10 @@ def WCDB2_run(r ,w):
 
 c=login()
 WCDB2_setup(c)
-tree = ET.parse(StringIO("<Bar><PersonKind id=\"1\"><Name>Cela</Name></PersonKind><Person id=\"12\"><Name><Suffix>Waza</Suffix></Name></Person><Organization hcwd=\"45\"><Location><Locality>Austin</Locality></Location><ContactInfo><PostalAddress><Locality>Marchew</Locality></PostalAddress></ContactInfo></Organization><Crisis bazyl=\"123\"><Kind va=\"12\"/><StartDateTime><Date>34</Date></StartDateTime></Crisis><Crisis bazyl=\"0\"><Name>Cela</Name><Location><Locality>Austin</Locality></Location><Location><Locality>Boston</Locality><Country>USA</Country></Location><ExternalResources><ImageURL>www</ImageURL><VideoURL>d</VideoURL><ImageURL>ccc</ImageURL></ExternalResources><StartDateTime><Date>34</Date><Time>33</Time></StartDateTime></Crisis></Bar>")) #importing the XML
+strr = sys.stdin.read()
+tree = ET.parse(StringIO(strr))
+print strr
+#tree = ET.parse(StringIO("<Bar><PersonKind id=\"1\"><Name>Cela</Name></PersonKind><Person id=\"12\"><Name><Suffix>Waza</Suffix></Name></Person><Organization hcwd=\"45\"><Location><Locality>Austin</Locality></Location><ContactInfo><PostalAddress><Locality>Marchew</Locality></PostalAddress></ContactInfo></Organization><Crisis bazyl=\"123\"><Kind va=\"12\"/><StartDateTime><Date>34</Date></StartDateTime></Crisis><Crisis bazyl=\"0\"><Name>Cela</Name><Location><Locality>Austin</Locality></Location><Location><Locality>Boston</Locality><Country>USA</Country></Location><ExternalResources><ImageURL>www</ImageURL><VideoURL>d</VideoURL><ImageURL>ccc</ImageURL></ExternalResources><StartDateTime><Date>34</Date><Time>33</Time></StartDateTime></Crisis></Bar>")) #importing the XML
 root = tree.getroot()
 WCDB2_import(c, root)
 xx=WCDB2_export(c)
