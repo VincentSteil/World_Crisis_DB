@@ -69,7 +69,7 @@ def WCDB2_setup(c):
   c is a mysql connection
   """
                 #makes sure tables are deleted
-  t = Query.query(c, "drop table if exists Crises;")
+  t = query(c, "drop table if exists Crises;")
   assert t is None
                 #creates a table
   t = query(c, """    
