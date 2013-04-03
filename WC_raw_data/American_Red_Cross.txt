@@ -1,0 +1,13 @@
+American Red Cross
+Kind: Humanitarian Aid
+Location: Washington, D.C., U.S.
+History: Established in 1881
+Contact info: http://www.redcross.org/
+Image URLs: http://www.bghealthservices.com/wp-content/uploads/2011/10/american-red-cross.jpg
+Video URLs: https://www.youtube.com/watch?v=z0b83hXXTmk
+Map URLs: http://www.mapquestapi.com/staticmap/v3/getmap?key=Gmjtd%7Cluua2hu2nq%2C8g%3Do5-lz8lq&type=map&size=298,298&center=36.4000087246612,-97.89035496011678&zoom=10&pois=blue_1,36.4000087246612,-97.89035496011678
+Social feeds URLs: https://twitter.com/RedCross
+Citations: http://en.wikipedia.org/wiki/American_Red_Cross
+External link URLs: http://arcweb.archives.gov/arc/action/ExternalIdSearch?id=783&jScript=true
+Crises: 2008 Mumbai attacks, 2010 Pakistan floods, 2010 Haiti Earthquake
+People: Gail McGovern
