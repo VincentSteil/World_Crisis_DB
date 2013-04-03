@@ -181,7 +181,7 @@ def WCDB2_import(c, root):
         tup[i.tag]=[]
         for j in i.iter():
           if j.tag!=i.tag:
-            tup[i.tag]+=j.attrib.values()[0]
+            tup[i.tag]+=[j.attrib.values()[0]]
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
@@ -226,7 +226,7 @@ def WCDB2_import(c, root):
         tup[i.tag]=[]
         for j in i.iter():
           if j.tag!=i.tag:
-            tup[i.tag]+=j.attrib.values()[0]
+            tup[i.tag]+=[j.attrib.values()[0]]
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
@@ -267,7 +267,7 @@ def WCDB2_import(c, root):
         tup[i.tag]=[]
         for j in i.iter():
           if j.tag!=i.tag:
-            tup[i.tag]+=j.attrib.values()[0]
+            tup[i.tag]+=[j.attrib.values()[0]]
     
     ret = list()
     for h in ordering:
