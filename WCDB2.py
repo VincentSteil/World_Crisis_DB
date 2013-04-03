@@ -34,7 +34,6 @@ def login () :
           passwd = "Ez0CbTAuV~",
           db = "cs327e_iwo")
   assert str(type(c)) == "<type '_mysql.connection'>"
-  print "OK connection"
   return c
 
 # -------------
@@ -186,7 +185,6 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    print str(tuple(ret))
     query(c, "insert into Crises values " + str(tuple(ret)) + ";")
   
    #Orgs
@@ -232,7 +230,6 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    print str(tuple(ret))
     query(c, "insert into Organizations values " + str(tuple(ret)) + ";")  
     #persons
   for crisis in root.findall('Person'):
@@ -275,7 +272,6 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    print str(tuple(ret))
     query(c, "insert into Persons values " + str(tuple(ret)) + ";")
   
   for crisis in root.findall('CrisisKind'):
@@ -289,7 +285,6 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    print str(tuple(ret))
     query(c, "insert into CrisisKinds values " + str(tuple(ret)) + ";")
 
   for crisis in root.findall('OrganizationKind'):
@@ -303,7 +298,6 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    print str(tuple(ret))
     query(c, "insert into OrgKinds values " + str(tuple(ret)) + ";")
 
   for crisis in root.findall('PersonKind'):
@@ -317,7 +311,6 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    print str(tuple(ret))
     query(c, "insert into PersonKinds values " + str(tuple(ret)) + ";")
 
 # -------------
@@ -547,12 +540,6 @@ def WCDB2_run(r ,w):
   #tree = ET.parse(StringIO("<Bar><PersonKind id=\"1\"><Name>Cela</Name></PersonKind><Person id=\"12\"><Name><Suffix>Waza</Suffix></Name></Person><Organization hcwd=\"45\"><Location><Locality>Austin</Locality></Location><ContactInfo><PostalAddress><Locality>Marchew</Locality></PostalAddress></ContactInfo></Organization><Crisis bazyl=\"123\"><Kind va=\"12\"/><StartDateTime><Date>34</Date></StartDateTime></Crisis><Crisis bazyl=\"0\"><Name>Cela</Name><Location><Locality>Austin</Locality></Location><Location><Locality>Boston</Locality><Country>USA</Country></Location><ExternalResources><ImageURL>www</ImageURL><VideoURL>d</VideoURL><ImageURL>ccc</ImageURL></ExternalResources><StartDateTime><Date>34</Date><Time>33</Time></StartDateTime></Crisis></Bar>")) #importing the XML
   tree = ET.parse(StringIO(strr)) #importing the XML
   root = tree.getroot()
-  root = tree.getroot()
   WCDB2_import(c, root)
   xx=WCDB2_export(c)
   WCDB2_print(w, ET.tostring(xx)) #sending tree to the printer
-
-
-
-
-WCDB2_run(sys.stdin, sys.stdout)
