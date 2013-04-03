@@ -60,7 +60,7 @@ def query (c, s) :
   
 
 # -------------
-# WCDB_setup
+# WCDB2_setup
 # -------------
 
 def WCDB2_setup(c):
@@ -83,7 +83,7 @@ def WCDB2_setup(c):
   assert t is None
 
 # -------------
-# WCDB_import
+# WCDB2_import
 # -------------
 
 def WCDB2_import(c, root):
@@ -140,7 +140,7 @@ def WCDB2_import(c, root):
   query(c, "insert into Student values (123, 'Amy', 3.9, 1000);")
 
 # -------------
-# WCDB_export
+# WCDB2_export
 # -------------
 
 def WCDB2_export(c):
@@ -158,7 +158,7 @@ def WCDB2_export(c):
   assert t is None
 
 # -------------
-# WCDB_print
+# WCDB2_print
 # -------------
 
 def WCDB2_print(w, tree):
@@ -187,4 +187,10 @@ def WCDB2_run(r ,w):
   root = tree.getroot()
   WCDB1_print(w, ET.tostring(root)) #sending tree to the printer
 
-login()
+c=login()
+WCDB2_setup(c)
+strr = r.read()
+assert len(strr)>0
+tree = ET.parse(StringIO(strr)) #importing the XML
+root = tree.getroot()
+WCDB2_import(c, root)
