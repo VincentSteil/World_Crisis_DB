@@ -155,7 +155,7 @@ def WCDB2_import(c, root):
       if i.tag=="Kind":
         tup["Kind"]=i.attrib.values()[0]
       elif len(i) == 0 :
-        if i.text != None:
+        if i.text != None and i.tag in tup.keys():
           if type(tup[i.tag])==list:
             tup[i.tag]+=[i.text]
           else:
@@ -203,7 +203,7 @@ def WCDB2_import(c, root):
       if i.tag=="Kind":
         tup["Kind"]=i.attrib.values()[0]
       elif len(i) == 0 :
-        if i.text != None:
+        if i.text != None and i.tag in tup.keys():
           if type(tup[i.tag])==list:
             tup[i.tag]+=[i.text]
           else:
@@ -246,7 +246,7 @@ def WCDB2_import(c, root):
       if i.tag=="Kind":
         tup["Kind"]=i.attrib.values()[0]
       elif len(i) == 0 :
-        if i.text != None:
+        if i.text != None and i.tag in tup.keys():
           if type(tup[i.tag])==list:
             tup[i.tag]+=[i.text]
           else:
@@ -283,6 +283,8 @@ def WCDB2_import(c, root):
     ordering = ["ID", "Name", "Description"]
     tup["ID"]=crisis.attrib.values()[0]
     for i in crisis :
+      if i.text == None:
+        i.text=""
       tup[i.tag]+=i.text
     ret = list()
     for h in ordering:
@@ -295,6 +297,8 @@ def WCDB2_import(c, root):
     ordering = ["ID", "Name", "Description"]
     tup["ID"]=crisis.attrib.values()[0]
     for i in crisis :
+      if i.text == None:
+        i.text=""
       tup[i.tag]+=i.text
     ret = list()
     for h in ordering:
@@ -307,6 +311,8 @@ def WCDB2_import(c, root):
     ordering = ["ID", "Name", "Description"]
     tup["ID"]=crisis.attrib.values()[0]
     for i in crisis :
+      if i.text == None:
+        i.text=""
       tup[i.tag]+=i.text
     ret = list()
     for h in ordering:
@@ -341,7 +347,8 @@ def WCDB2_export(c):
     m=ET.SubElement(temp, "StartDateTime")
     ii=ast.literal_eval(i[4])
     n=ET.SubElement(m, "Date")
-    n.text=ii[0]
+    if len(ii)>0:
+      n.text=ii[0]
     if len(ii)==2:
       n=ET.SubElement(m, "Time")
       n.text=ii[1]
@@ -528,24 +535,24 @@ def WCDB2_print(w, tree):
   
 def WCDB2_run(r ,w):
   """
-  This function reads from the input and prints to input an XML
+  This function reads an XML from the input then imports it to MySQL then exports it from MySQL and prints the XML
   r is a reader
   w is a writer
   """
-
+  c=login()
+  WCDB2_setup(c)
   strr = r.read()
   assert len(strr)>0
+  strr = strr.replace("&", "&amp;")
+  #tree = ET.parse(StringIO("<Bar><PersonKind id=\"1\"><Name>Cela</Name></PersonKind><Person id=\"12\"><Name><Suffix>Waza</Suffix></Name></Person><Organization hcwd=\"45\"><Location><Locality>Austin</Locality></Location><ContactInfo><PostalAddress><Locality>Marchew</Locality></PostalAddress></ContactInfo></Organization><Crisis bazyl=\"123\"><Kind va=\"12\"/><StartDateTime><Date>34</Date></StartDateTime></Crisis><Crisis bazyl=\"0\"><Name>Cela</Name><Location><Locality>Austin</Locality></Location><Location><Locality>Boston</Locality><Country>USA</Country></Location><ExternalResources><ImageURL>www</ImageURL><VideoURL>d</VideoURL><ImageURL>ccc</ImageURL></ExternalResources><StartDateTime><Date>34</Date><Time>33</Time></StartDateTime></Crisis></Bar>")) #importing the XML
   tree = ET.parse(StringIO(strr)) #importing the XML
   root = tree.getroot()
-  WCDB1_print(w, ET.tostring(root)) #sending tree to the printer
+  root = tree.getroot()
+  WCDB2_import(c, root)
+  xx=WCDB2_export(c)
+  WCDB2_print(w, ET.tostring(xx)) #sending tree to the printer
 
-c=login()
-WCDB2_setup(c)
-strr = sys.stdin.read()
-tree = ET.parse(StringIO(strr))
-print strr
-#tree = ET.parse(StringIO("<Bar><PersonKind id=\"1\"><Name>Cela</Name></PersonKind><Person id=\"12\"><Name><Suffix>Waza</Suffix></Name></Person><Organization hcwd=\"45\"><Location><Locality>Austin</Locality></Location><ContactInfo><PostalAddress><Locality>Marchew</Locality></PostalAddress></ContactInfo></Organization><Crisis bazyl=\"123\"><Kind va=\"12\"/><StartDateTime><Date>34</Date></StartDateTime></Crisis><Crisis bazyl=\"0\"><Name>Cela</Name><Location><Locality>Austin</Locality></Location><Location><Locality>Boston</Locality><Country>USA</Country></Location><ExternalResources><ImageURL>www</ImageURL><VideoURL>d</VideoURL><ImageURL>ccc</ImageURL></ExternalResources><StartDateTime><Date>34</Date><Time>33</Time></StartDateTime></Crisis></Bar>")) #importing the XML
-root = tree.getroot()
-WCDB2_import(c, root)
-xx=WCDB2_export(c)
-WCDB2_print(sys.stdout, ET.tostring(xx))
+
+
+
+WCDB2_run(sys.stdin, sys.stdout)
