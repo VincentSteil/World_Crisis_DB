@@ -137,7 +137,7 @@ def WCDB2_setup(c):
 
 def WCDB2_import(c, root):
   """
-  This function sets up the MySQL database that we will use
+  This function imports the XML instance to the MySQL database
   c is a mysql connection
   tree is an ElementTree
   """
@@ -320,7 +320,7 @@ def WCDB2_import(c, root):
 
 def WCDB2_export(c):
   """
-  This function sets up the MySQL database that we will use
+  This function exports the MySQL database to XML file
   c is a mysql connection
   """
   ret = ET.Element("WorldCrises")
