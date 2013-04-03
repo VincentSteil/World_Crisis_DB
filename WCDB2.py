@@ -12,6 +12,8 @@ import sys
 import xml.etree.ElementTree as ET
 from cStringIO import StringIO
 import _mysql
+import ast
+import xml.dom.minidom
 
 # -------------
 # login
@@ -141,8 +143,8 @@ def WCDB2_import(c, root):
   """
   #Crises
   for crisis in root.findall('Crisis'):
-    tup = {"ID" : "", "Name" : "", "Kind" : "", "Location" : [], "StartDateTime" : "", "EndDateTime" : "",
-           "HumanImpact" : [], "EconomicImpact" : "", "ResourceNeeded" : [], "WaysToHelp" : [], "ExternalResources" : "",
+    tup = {"ID" : "", "Name" : "", "Kind" : "", "Location" : [], "StartDateTime" : [], "EndDateTime" : [],
+           "HumanImpact" : [], "EconomicImpact" : "", "ResourceNeeded" : [], "WaysToHelp" : [], "ExternalResources" : [],
            "RelatedPersons" : [], "RelatedOrganizations" : []}
     ordering = ["ID", "Name", "Kind", "Location", "StartDateTime", "EndDateTime",
            "HumanImpact", "EconomicImpact", "ResourceNeeded", "WaysToHelp", "ExternalResources",
@@ -164,7 +166,7 @@ def WCDB2_import(c, root):
         if i.find("Time") != None :
           tup[i.tag]=[i.find("Date").text, i.find("Time").text]
         else:
-          tup[i.tag]=[i.find("Date").text, ""]
+          tup[i.tag]=[i.find("Date").text]
       elif i.tag=="HumanImpact":
         tup[i.tag]+=[i.find("Type").text, i.find("Number").text]
       elif i.tag=="ExternalResources":
@@ -187,7 +189,7 @@ def WCDB2_import(c, root):
   for crisis in root.findall('Organization'):
     tup = {"ID" : "", "Name" : "", "Kind" : "", "Location" : [], "History" : "", "Telephone" : "",
            "Fax" : "", "Email" : "", "StreetAddress" : "", "Locality" : "", "Region" : "",
-           "PostalCode" : "", "Country" : "", "ExternalResources" : "", "RelatedPersons" : [], "RelatedCrises" : []}
+           "PostalCode" : "", "Country" : "", "ExternalResources" : [], "RelatedPersons" : [], "RelatedCrises" : []}
     ordering = ["ID", "Name", "Kind", "Location", "History", "Telephone",
            "Fax", "Email", "StreetAddress", "Locality", "Region",
            "PostalCode", "Country", "ExternalResources", "RelatedPersons", "RelatedCrises"]
@@ -227,7 +229,7 @@ def WCDB2_import(c, root):
     #persons
   for crisis in root.findall('Person'):
     tup = {"ID" : "", "FirstName" : "", "MiddleName" : "", "LastName" : "", "Suffix" : "", "Kind" : "", "Location" : [],
-           "ExternalResources" : "", "RelatedCrises" : [], "RelatedOrganizations" : []}
+           "ExternalResources" : [], "RelatedCrises" : [], "RelatedOrganizations" : []}
     ordering = ["ID", "FirstName", "MiddleName", "LastName", "Suffix", "Kind", "Location", "ExternalResources",
            "RelatedCrises", "RelatedOrganizations"]
     tup["ID"]=crisis.attrib.values()[0]
@@ -309,14 +311,188 @@ def WCDB2_export(c):
   This function sets up the MySQL database that we will use
   c is a mysql connection
   """
+  ret = ET.Element("WorldCrises")
                 #makes sure tables are deleted
-  t = Query.query(c, "drop table if exists Student;")
-  assert t is None
-                #creates a table
-  t = query(c, """    
-            
-  """)
-  assert t is None
+  t = query(c, "select * from Crises;")
+  for i in t :
+    temp = ET.SubElement(ret, "Crisis", {"crisisIdent" : i[0]})
+    n=ET.SubElement(temp, "Name")
+    n.text=i[1]
+    n=ET.SubElement(temp, "Kind", {"crisisKindIdent" : i[2]})
+    for j in ast.literal_eval(i[3]):
+      m=ET.SubElement(temp, "Location")
+      order = ["Locality", "Region", "Country"]
+      for k in order:
+        if k in j:
+          n=ET.SubElement(m, k)
+          n.text=j[k]
+    m=ET.SubElement(temp, "StartDateTime")
+    ii=ast.literal_eval(i[4])
+    n=ET.SubElement(m, "Date")
+    n.text=ii[0]
+    if len(ii)==2:
+      n=ET.SubElement(m, "Time")
+      n.text=ii[1]
+    
+    ii=ast.literal_eval(i[5])
+    if len(ii)>0 :
+      m=ET.SubElement(temp, "EndDateTime")
+      n=ET.SubElement(m, "Date")
+      n.text=ii[0]
+      if len(ii)==2:
+        n=ET.SubElement(m, "Time")
+        n.text=ii[1]
+
+    ii=ast.literal_eval(i[6])
+    if len(ii)>0 :
+      m=ET.SubElement(temp, "HumanImpact")
+      n=ET.SubElement(m, "Type")
+      n.text=ii[0]
+      n=ET.SubElement(m, "Number")
+      n.text=ii[1]
+    n=ET.SubElement(temp, "EconomicImpact")
+    n.text=i[7]
+    ii=ast.literal_eval(i[8])
+    for j in ii:
+      n=ET.SubElement(temp, "ResourceNeeded")
+      n.text=j
+    ii=ast.literal_eval(i[9])
+    for j in ii:
+      n=ET.SubElement(temp, "WaysToHelp")
+      n.text=j
+    m=ET.SubElement(temp, "ExternalResources")
+    ii=ast.literal_eval(i[10])
+    for j in ii:
+      n=ET.SubElement(m, j[0])
+      n.text=j[1]
+
+    ii=ast.literal_eval(i[11])
+    if len(ii)>0:
+      m=ET.SubElement(temp, "RelatedPersons")
+      for j in ii:
+         n=ET.SubElement(m, "RelatedPerson", {"personIdent":j})
+        
+    ii=ast.literal_eval(i[12])
+    if len(ii)>0:
+      m=ET.SubElement(temp, "RelatedOrganizations")
+      for j in ii:
+         n=ET.SubElement(m, "RelatedOrganization", {"organizationIdent":j})
+
+  t = query(c, "select * from Organizations;")
+  for i in t :
+    temp = ET.SubElement(ret, "Organization", {"organizationIdent" : i[0]})
+    n=ET.SubElement(temp, "Name")
+    n.text=i[1]
+    n=ET.SubElement(temp, "Kind", {"organizationKindIdent" : i[2]})
+    for j in ast.literal_eval(i[3]):
+      m=ET.SubElement(temp, "Location")
+      order = ["Locality", "Region", "Country"]
+      for k in order:
+        if k in j:
+          n=ET.SubElement(m, k)
+          n.text=j[k]
+    n=ET.SubElement(temp, "History")
+    n.text=i[4]
+    m=ET.SubElement(temp, "ContactInfo")
+    n=ET.SubElement(m, "Telephone")
+    n.text=i[5]
+    n=ET.SubElement(m, "Fax")
+    n.text=i[6]
+    n=ET.SubElement(m, "Email")
+    n.text=i[7]
+    n=ET.SubElement(m, "PostalAddress")
+    o=ET.SubElement(n, "StreetAddress")
+    o.text=i[8]
+    o=ET.SubElement(n, "Locality")
+    o.text=i[9]
+    o=ET.SubElement(n, "Region")
+    o.text=i[10]
+    o=ET.SubElement(n, "PostalCode")
+    o.text=i[11]
+    o=ET.SubElement(n, "Country")
+    o.text=i[12]
+    m=ET.SubElement(temp, "ExternalResources")
+    ii=ast.literal_eval(i[13])
+    for j in ii:
+      n=ET.SubElement(m, j[0])
+      n.text=j[1]
+    ii=ast.literal_eval(i[14])
+    if len(ii)>0:
+      m=ET.SubElement(temp, "RelatedCrises")
+      for j in ii:
+         n=ET.SubElement(m, "RelatedCrisis", {"crisisIdent":j})
+        
+    ii=ast.literal_eval(i[15])
+    if len(ii)>0:
+      m=ET.SubElement(temp, "RelatedPersons")
+      for j in ii:
+         n=ET.SubElement(m, "RelatedPerson", {"personIdent":j})
+  
+  t = query(c, "select * from Persons;")
+  for i in t :
+    temp = ET.SubElement(ret, "Person", {"personIdent" : i[0]})
+    m=ET.SubElement(temp, "Name")
+    n=ET.SubElement(m, "FirstName")
+    n.text=i[1]
+    if len(i[2])>0:
+      n=ET.SubElement(m, "MiddleName")
+      n.text=i[2]
+    n=ET.SubElement(m, "LastName")
+    n.text=i[3]
+    if len(i[4])>0:
+      n=ET.SubElement(m, "Suffix")
+      n.text=i[4]
+    n=ET.SubElement(temp, "Kind", {"personKindIdent" : i[5]})
+    for j in ast.literal_eval(i[6]):
+      m=ET.SubElement(temp, "Location")
+      order = ["Locality", "Region", "Country"]
+      for k in order:
+        if k in j:
+          n=ET.SubElement(m, k)
+          n.text=j[k]
+    m=ET.SubElement(temp, "ExternalResources")
+    ii=ast.literal_eval(i[7])
+    for j in ii:
+      n=ET.SubElement(m, j[0])
+      n.text=j[1]
+    ii=ast.literal_eval(i[8])
+    if len(ii)>0:
+      m=ET.SubElement(temp, "RelatedCrises")
+      for j in ii:
+         n=ET.SubElement(m, "RelatedCrisis", {"crisisIdent":j})
+    ii=ast.literal_eval(i[9])
+    if len(ii)>0:
+      m=ET.SubElement(temp, "RelatedOrganizations")
+      for j in ii:
+         n=ET.SubElement(m, "RelatedOrganization", {"organizationIdent":j})
+
+  t = query(c, "select * from CrisisKinds;")
+  for i in t :
+    temp = ET.SubElement(ret, "CrisisKind", {"crisisKindIdent" : i[0]})
+    n=ET.SubElement(temp, "Name")
+    n.text=i[1]
+    n=ET.SubElement(temp, "Description")
+    n.text=i[2]
+
+  t = query(c, "select * from OrgKinds;")
+  for i in t :
+    temp = ET.SubElement(ret, "OrganizationKind", {"organizationKindIdent" : i[0]})
+    n=ET.SubElement(temp, "Name")
+    n.text=i[1]
+    n=ET.SubElement(temp, "Description")
+    n.text=i[2]
+
+  t = query(c, "select * from PersonKinds;")
+  for i in t :
+    temp = ET.SubElement(ret, "PersonKind", {"personKindIdent" : i[0]})
+    n=ET.SubElement(temp, "Name")
+    n.text=i[1]
+    n=ET.SubElement(temp, "Description")
+    n.text=i[2]
+  assert t is not None
+  assert ret is not None
+  return ret
+  
 
 # -------------
 # WCDB2_print
@@ -328,7 +504,10 @@ def WCDB2_print(w, tree):
   w is a writer
   tree is a string to print
   """
-  w.write(tree) #printing to .out file
+
+  x = xml.dom.minidom.parseString(tree)
+  woop = x.toprettyxml()
+  w.write(woop) #printing to .out file
 
 # -------------
 # WCDB2_run
@@ -350,6 +529,8 @@ def WCDB2_run(r ,w):
 
 c=login()
 WCDB2_setup(c)
-tree = ET.parse(StringIO("<Bar><PersonKind id=\"1\"><Name>Cela</Name></PersonKind><Person id=\"12\"><Name><Suffix>Waza</Suffix></Name></Person><Organization hcwd=\"45\"><Location><Locality>Austin</Locality></Location><ContactInfo><PostalAddress><Locality>Marchew</Locality></PostalAddress></ContactInfo></Organization><Crisis bazyl=\"123\"><Kind va=\"12\"/></Crisis><Crisis bazyl=\"0\"><Name>Cela</Name><Location><Locality>Austin</Locality></Location><Location><Locality>Boston</Locality><Country>USA</Country></Location><ExternalResources><ImageURL>www</ImageURL><VideoURL>d</VideoURL><ImageURL>ccc</ImageURL></ExternalResources></Crisis></Bar>")) #importing the XML
+tree = ET.parse(StringIO("<Bar><PersonKind id=\"1\"><Name>Cela</Name></PersonKind><Person id=\"12\"><Name><Suffix>Waza</Suffix></Name></Person><Organization hcwd=\"45\"><Location><Locality>Austin</Locality></Location><ContactInfo><PostalAddress><Locality>Marchew</Locality></PostalAddress></ContactInfo></Organization><Crisis bazyl=\"123\"><Kind va=\"12\"/><StartDateTime><Date>34</Date></StartDateTime></Crisis><Crisis bazyl=\"0\"><Name>Cela</Name><Location><Locality>Austin</Locality></Location><Location><Locality>Boston</Locality><Country>USA</Country></Location><ExternalResources><ImageURL>www</ImageURL><VideoURL>d</VideoURL><ImageURL>ccc</ImageURL></ExternalResources><StartDateTime><Date>34</Date><Time>33</Time></StartDateTime></Crisis></Bar>")) #importing the XML
 root = tree.getroot()
 WCDB2_import(c, root)
+xx=WCDB2_export(c)
+WCDB2_print(sys.stdout, ET.tostring(xx))
