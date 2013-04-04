@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module WCDB2</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>WCDB2</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v35q001/iwo/cs327e-wcdb/WCDB2.py">/v/filer4b/v35q001/iwo/cs327e-wcdb/WCDB2.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-------------------<br>
+#&nbsp;WCDB2.py<br>
+#&nbsp;Group&nbsp;name:&nbsp;Is&nbsp;Yuchen&nbsp;Here&nbsp;Today?<br>
+#&nbsp;Lab&nbsp;4<br>
+#&nbsp;-------------------</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="xml.etree.ElementTree.html">xml.etree.ElementTree</a><br>
+<a href="_mysql.html">_mysql</a><br>
+</td><td width="25%" valign=top><a href="ast.html">ast</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="xml.html">xml</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-StringIO"><strong>StringIO</strong></a>(...)</dt><dd><tt><a href="#-StringIO">StringIO</a>([s])&nbsp;--&nbsp;Return&nbsp;a&nbsp;StringIO-like&nbsp;stream&nbsp;for&nbsp;reading&nbsp;or&nbsp;writing</tt></dd></dl>
+ <dl><dt><a name="-WCDB2_export"><strong>WCDB2_export</strong></a>(c)</dt><dd><tt>This&nbsp;function&nbsp;exports&nbsp;the&nbsp;MySQL&nbsp;database&nbsp;to&nbsp;XML&nbsp;file<br>
+c&nbsp;is&nbsp;a&nbsp;mysql&nbsp;connection</tt></dd></dl>
+ <dl><dt><a name="-WCDB2_import"><strong>WCDB2_import</strong></a>(c, root)</dt><dd><tt>This&nbsp;function&nbsp;imports&nbsp;the&nbsp;XML&nbsp;instance&nbsp;to&nbsp;the&nbsp;MySQL&nbsp;database<br>
+c&nbsp;is&nbsp;a&nbsp;mysql&nbsp;connection<br>
+tree&nbsp;is&nbsp;an&nbsp;ElementTree</tt></dd></dl>
+ <dl><dt><a name="-WCDB2_print"><strong>WCDB2_print</strong></a>(w, tree)</dt><dd><tt>This&nbsp;function&nbsp;prints&nbsp;tree&nbsp;to&nbsp;writer&nbsp;w<br>
+w&nbsp;is&nbsp;a&nbsp;writer<br>
+tree&nbsp;is&nbsp;a&nbsp;string&nbsp;to&nbsp;print</tt></dd></dl>
+ <dl><dt><a name="-WCDB2_run"><strong>WCDB2_run</strong></a>(r, w)</dt><dd><tt>This&nbsp;function&nbsp;reads&nbsp;an&nbsp;XML&nbsp;from&nbsp;the&nbsp;input&nbsp;then&nbsp;imports&nbsp;it&nbsp;to&nbsp;MySQL&nbsp;then&nbsp;exports&nbsp;it&nbsp;from&nbsp;MySQL&nbsp;and&nbsp;prints&nbsp;the&nbsp;XML<br>
+r&nbsp;is&nbsp;a&nbsp;reader<br>
+w&nbsp;is&nbsp;a&nbsp;writer</tt></dd></dl>
+ <dl><dt><a name="-WCDB2_setup"><strong>WCDB2_setup</strong></a>(c)</dt><dd><tt>This&nbsp;function&nbsp;sets&nbsp;up&nbsp;the&nbsp;MySQL&nbsp;database&nbsp;that&nbsp;we&nbsp;will&nbsp;use<br>
+c&nbsp;is&nbsp;a&nbsp;mysql&nbsp;connection</tt></dd></dl>
+ <dl><dt><a name="-login"><strong>login</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;gets&nbsp;the&nbsp;login&nbsp;info&nbsp;and&nbsp;logins&nbsp;to&nbsp;a&nbsp;MySQL&nbsp;database<br>
+c&nbsp;is&nbsp;a&nbsp;mysql&nbsp;connection</tt></dd></dl>
+ <dl><dt><a name="-query"><strong>query</strong></a>(c, s)</dt><dd><tt>This&nbsp;function&nbsp;executes&nbsp;a&nbsp;query&nbsp;and&nbsp;returns&nbsp;its&nbsp;result<br>
+c&nbsp;is&nbsp;a&nbsp;mysql&nbsp;connection<br>
+s&nbsp;is&nbsp;a&nbsp;string&nbsp;that&nbsp;contains&nbsp;the&nbsp;query<br>
+t&nbsp;is&nbsp;the&nbsp;result/outcome&nbsp;of&nbsp;the&nbsp;query&nbsp;to&nbsp;be&nbsp;returned</tt></dd></dl>
+</td></tr></table>
+</body></html>
