@@ -69,7 +69,7 @@ def WCDB2_setup(c):
   This function sets up the MySQL database that we will use
   c is a mysql connection
   """
-                #makes sure tables are deleted
+                #makes sure tables are deleted if they existed before
   t = query(c, "drop table if exists Crises;")
   assert t is None
   t = query(c, "drop table if exists Organizations;")
@@ -82,7 +82,7 @@ def WCDB2_setup(c):
   assert t is None
   t = query(c, "drop table if exists OrgKinds;")
   assert t is None
-                #creates a table
+                #creates tables
   t = query(c, """    
     create table Crises (
     cID text,
@@ -273,7 +273,7 @@ def WCDB2_import(c, root):
     for h in ordering:
       ret.append(str(tup[h]))
     query(c, "insert into Persons values " + str(tuple(ret)) + ";")
-  
+  #Crisis kinds
   for crisis in root.findall('CrisisKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
     ordering = ["ID", "Name", "Description"]
@@ -286,7 +286,7 @@ def WCDB2_import(c, root):
     for h in ordering:
       ret.append(str(tup[h]))
     query(c, "insert into CrisisKinds values " + str(tuple(ret)) + ";")
-
+  #organization kinds
   for crisis in root.findall('OrganizationKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
     ordering = ["ID", "Name", "Description"]
@@ -299,7 +299,7 @@ def WCDB2_import(c, root):
     for h in ordering:
       ret.append(str(tup[h]))
     query(c, "insert into OrgKinds values " + str(tuple(ret)) + ";")
-
+  #person kinds
   for crisis in root.findall('PersonKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
     ordering = ["ID", "Name", "Description"]
@@ -323,7 +323,7 @@ def WCDB2_export(c):
   c is a mysql connection
   """
   ret = ET.Element("WorldCrises")
-                #makes sure tables are deleted
+      #exports crises
   t = query(c, "select * from Crises;")
   for i in t :
     temp = ET.SubElement(ret, "Crisis", {"crisisIdent" : i[0]})
@@ -389,7 +389,7 @@ def WCDB2_export(c):
       m=ET.SubElement(temp, "RelatedOrganizations")
       for j in ii:
          n=ET.SubElement(m, "RelatedOrganization", {"organizationIdent":j})
-
+        #exports organizations
   t = query(c, "select * from Organizations;")
   for i in t :
     temp = ET.SubElement(ret, "Organization", {"organizationIdent" : i[0]})
@@ -439,7 +439,7 @@ def WCDB2_export(c):
       m=ET.SubElement(temp, "RelatedPersons")
       for j in ii:
          n=ET.SubElement(m, "RelatedPerson", {"personIdent":j})
-  
+        #exports persons
   t = query(c, "select * from Persons;")
   for i in t :
     temp = ET.SubElement(ret, "Person", {"personIdent" : i[0]})
@@ -477,7 +477,7 @@ def WCDB2_export(c):
       m=ET.SubElement(temp, "RelatedOrganizations")
       for j in ii:
          n=ET.SubElement(m, "RelatedOrganization", {"organizationIdent":j})
-
+        #exports CrisisKinds
   t = query(c, "select * from CrisisKinds;")
   for i in t :
     temp = ET.SubElement(ret, "CrisisKind", {"crisisKindIdent" : i[0]})
@@ -485,7 +485,7 @@ def WCDB2_export(c):
     n.text=i[1]
     n=ET.SubElement(temp, "Description")
     n.text=i[2]
-
+        #exports OrgKinds
   t = query(c, "select * from OrgKinds;")
   for i in t :
     temp = ET.SubElement(ret, "OrganizationKind", {"organizationKindIdent" : i[0]})
@@ -493,7 +493,7 @@ def WCDB2_export(c):
     n.text=i[1]
     n=ET.SubElement(temp, "Description")
     n.text=i[2]
-
+        #exports PersonKinds
   t = query(c, "select * from PersonKinds;")
   for i in t :
     temp = ET.SubElement(ret, "PersonKind", {"personKindIdent" : i[0]})
@@ -519,7 +519,7 @@ def WCDB2_print(w, tree):
 
   x = xml.dom.minidom.parseString(tree)
   woop = x.toprettyxml()
-  w.write(woop) #printing to .out file
+  w.write(woop) #printing to the console
 
 # -------------
 # WCDB2_run
@@ -537,7 +537,6 @@ def WCDB2_run(r ,w):
   strr = r.read()
   assert len(strr)>0
   strr = strr.replace("&", "&amp;")
-  #tree = ET.parse(StringIO("<Bar><PersonKind id=\"1\"><Name>Cela</Name></PersonKind><Person id=\"12\"><Name><Suffix>Waza</Suffix></Name></Person><Organization hcwd=\"45\"><Location><Locality>Austin</Locality></Location><ContactInfo><PostalAddress><Locality>Marchew</Locality></PostalAddress></ContactInfo></Organization><Crisis bazyl=\"123\"><Kind va=\"12\"/><StartDateTime><Date>34</Date></StartDateTime></Crisis><Crisis bazyl=\"0\"><Name>Cela</Name><Location><Locality>Austin</Locality></Location><Location><Locality>Boston</Locality><Country>USA</Country></Location><ExternalResources><ImageURL>www</ImageURL><VideoURL>d</VideoURL><ImageURL>ccc</ImageURL></ExternalResources><StartDateTime><Date>34</Date><Time>33</Time></StartDateTime></Crisis></Bar>")) #importing the XML
   tree = ET.parse(StringIO(strr)) #importing the XML
   root = tree.getroot()
   WCDB2_import(c, root)
