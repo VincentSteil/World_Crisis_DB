@@ -1,0 +1,13 @@
+National Guard of the United States
+Kind: Military
+Location: U.S.
+History: Established in 1903
+Contact info: http://www.nationalguard.com/
+Image URLs: http://www.jmu.edu/rotc/images/nationalguard.png
+Video URLs: https://www.youtube.com/watch?v=jPN-hSraZHc
+Map URLs: n/a
+Social feeds URLs: https://twitter.com/NationalGuard
+Citations: http://en.wikipedia.org/wiki/National_Guard_of_the_United_States
+External link URLs: http://www.nationalguard.mil/
+Crises: Hurricane Carla
+People: Dwight Eisenhower

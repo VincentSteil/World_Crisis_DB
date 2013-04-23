@@ -1,0 +1,752 @@
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name>2010 Chile Earthquake</Name>
+		<Kind crisisKindIdent="ND"/>
+		<Location>
+			<Locality>Location 3 km off the coast of Pelluhue commune in the Maule Region</Locality>
+			<Country>Chile</Country>
+		</Location>
+		<StartDateTime>
+			<Date>2010-02-27</Date>
+		</StartDateTime>
+		<HumanImpact>
+			<Type>Death</Type>
+			<Number>525</Number>
+		</HumanImpact>
+		<EconomicImpact>15000000000</EconomicImpact>
+		<ResourceNeeded>Money</ResourceNeeded>
+		<ResourceNeeded>Foreign Aid</ResourceNeeded>
+		<ResourceNeeded>Temporary Housing</ResourceNeeded>
+		<ExternalResources>
+			<ImageURL>Image URLs http://gaiaworld.wikispaces.com/file/view/2010-Chile-Earthquake-81.jpg/206096962/2010-Chile-Earthquake-81.jpg</ImageURL>
+			<MapURL>http://upload.wikimedia.org/wikipedia/commons/8/8e/2010_Chile_earthquake_epicenter.png</MapURL>
+			<VideoURL>https://www.youtube.com/watch?v=ItkgEkiX-vw</VideoURL>
+		</ExternalResources>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name>Christian Aid</Name>
+		<Kind organizationKindIdent="RE"/>
+		<Location>
+			<Locality>London</Locality>
+			<Country>UK</Country>
+		</Location>
+		<History/>
+		<ContactInfo>
+			<Telephone>None</Telephone>
+			<Fax>None</Fax>
+			<Email>None</Email>
+			<PostalAddress>
+				<StreetAddress>None</StreetAddress>
+				<Locality>London</Locality>
+				<Region>None</Region>
+				<PostalCode>None</PostalCode>
+				<Country>UK</Country>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources>
+			<ImageURL>http://www.livefortheoutdoors.com/upload/536096/Christian-Aid.jpg</ImageURL>
+			<VideoURL>https://www.youtube.com/watch?v=kLBZl4FzOww</VideoURL>
+			<MapURL>https://maps.google.com/maps?q=Christian%20Aid&amp;aq=f&amp;um=1&amp;hl=en&amp;biw=1600&amp;bih=775&amp;ie=UTF-8&amp;sa=N&amp;tab=il</MapURL>
+		</ExternalResources>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName>Michelle</FirstName>
+			<LastName>Bachelet</LastName>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<Location>
+			<Locality>Santiago</Locality>
+			<Region/>
+			<Country>Chile</Country>
+		</Location>
+		<ExternalResources>
+			<ImageURL>http://upload.wikimedia.org/wikipedia/commons/c/c8/Michele_Bachelet_%282009%29.jpg</ImageURL>
+			<VideoURL>https://www.youtube.com/watch?v=i8I9w3F753A</VideoURL>
+			<MapURL>https://maps.google.com/maps?hl=en&amp;q=santiago+chile&amp;bav=on.2,or.r_gc.r_pw.r_qf.&amp;biw=1600&amp;bih=775&amp;um=1&amp;ie=UTF-8&amp;sa=N&amp;tab=wl</MapURL>
+			<SocialNetworkURL>https://twitter.com/Bacheletjeria</SocialNetworkURL>
+		</ExternalResources>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name>Natural Disaster</Name>
+		<Description>When the elements prove to be too much for humans</Description>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name>Relief and Development Agency</Name>
+		<Description>Organization that provides humanitarian aid</Description>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name>President</Name>
+		<Description>Leader or the government of some countries</Description>
+	</PersonKind>
+</WorldCrises>
+
+
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date>2010-02-27</Date>
+		</StartDateTime>
+		<EconomicImpact>15000000000</EconomicImpact>
+		<ExternalResources/>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name>Christian Aid</Name>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName>Michelle</FirstName>
+			<LastName>Bachelet</LastName>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name>Natural Disaster</Name>
+		<Description>When the elements prove to be too much for humans</Description>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name>Relief and Development Agency</Name>
+		<Description>Organization that provides humanitarian aid</Description>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name>President</Name>
+		<Description>Leader or the government of some countries</Description>
+	</PersonKind>
+</WorldCrises>
+
+
+<?xml version="1.0" ?>
+<WorldCrises/>
+
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+</WorldCrises>
+
+
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<Location>
+			<Country>Chile</Country>
+		</Location>
+		<StartDateTime>
+			<Date>2010-02-27</Date>
+		</StartDateTime>
+		<EconomicImpact>15000000000</EconomicImpact>
+		<ExternalResources>
+			<ImageURL>Image URLs http://gaiaworld.wikispaces.com/file/view/2010-Chile-Earthquake-81.jpg/206096962/2010-Chile-Earthquake-81.jpg</ImageURL>
+			<MapURL>http://upload.wikimedia.org/wikipedia/commons/8/8e/2010_Chile_earthquake_epicenter.png</MapURL>
+			<VideoURL>https://www.youtube.com/watch?v=ItkgEkiX-vw</VideoURL>
+		</ExternalResources>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name>Christian Aid</Name>
+		<Kind organizationKindIdent="RE"/>
+		<Location>
+			<Country>UK</Country>
+		</Location>
+		<History/>
+		<ContactInfo>
+			<Telephone>None</Telephone>
+			<Fax>None</Fax>
+			<Email>None</Email>
+			<PostalAddress>
+				<StreetAddress>None</StreetAddress>
+				<Locality>London</Locality>
+				<Region>None</Region>
+				<PostalCode>None</PostalCode>
+				<Country>UK</Country>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName>Michelle</FirstName>
+			<LastName>Bachelet</LastName>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<Location>
+			<Locality>Santiago</Locality>
+			<Region/>
+			<Country>Chile</Country>
+		</Location>
+		<ExternalResources/>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name>Natural Disaster</Name>
+		<Description>When the elements prove to be too much for humans</Description>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name>Relief and Development Agency</Name>
+		<Description>Organization that provides humanitarian aid</Description>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name>President</Name>
+		<Description>Leader or the government of some countries</Description>
+	</PersonKind>
+</WorldCrises>
+
+
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date>2010-02-27</Date>
+		</StartDateTime>
+		<EconomicImpact>15000000000</EconomicImpact>
+		<ExternalResources/>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+</WorldCrises>
+
+
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+</WorldCrises>
+
+
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Crisis crisisIdent="OP2012">
+		<Name/>
+		<Kind crisisKindIdent="WAR"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<CrisisKind crisisKindIdent="WAR">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+</WorldCrises>
+
+
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Crisis crisisIdent="OP2012">
+		<Name/>
+		<Kind crisisKindIdent="WAR"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Crisis crisisIdent="NA2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Crisis crisisIdent="EF2013">
+		<Name/>
+		<Kind crisisKindIdent="WAR"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<CrisisKind crisisKindIdent="WAR">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<CrisisKind crisisKindIdent="ND">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<CrisisKind crisisKindIdent="WAR">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+</WorldCrises>
+
+
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date>2010-02-27</Date>
+		</StartDateTime>
+		<EconomicImpact>15000000000</EconomicImpact>
+		<ExternalResources/>
+	</Crisis>
+	<Crisis crisisIdent="SF2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date/>
+		</StartDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name>Christian Aid</Name>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources/>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName>Michelle</FirstName>
+			<LastName>Bachelet</LastName>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName/>
+			<LastName/>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<ExternalResources/>
+	</Person>
+	<CrisisKind crisisKindIdent="ND">
+		<Name>Natural Disaster</Name>
+		<Description>When the elements prove to be too much for humans</Description>
+	</CrisisKind>
+	<CrisisKind crisisKindIdent="ND">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name>Relief and Development Agency</Name>
+		<Description>Organization that provides humanitarian aid</Description>
+	</OrganizationKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name>President</Name>
+		<Description>Leader or the government of some countries</Description>
+	</PersonKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+</WorldCrises>

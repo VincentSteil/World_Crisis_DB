@@ -1,0 +1,80 @@
+<WorldCrises>
+  <Crisis crisisIdent="Shirley_WAR_2013">
+    <Name>2013 Great Attack of Shirley</Name>
+    <Kind crisisKindIdent="WAR"/>
+    <Location>
+      <Locality>Houston</Locality>
+      <Country>USA</Country>
+    </Location>
+    <StartDateTime>
+      <Date>2013-04-01</Date>
+    </StartDateTime>
+    <HumanImpact>
+      <Type>Death</Type>
+      <Number>1</Number>
+    </HumanImpact>
+    <EconomicImpact>72000000000000000000000000000</EconomicImpact>
+    <ResourceNeeded>Cash</ResourceNeeded>
+    <WaysToHelp></WaysToHelp>
+    <ExternalResources></ExternalResources>
+  </Crisis>
+
+  <Organization organizationIdent="HSO">
+    <Name>Help Shirley Organization</Name>
+    <Kind organizationKindIdent="HO"/>
+    <Location>
+      <Locality>Houston</Locality>
+      <Country>USA</Country>
+    </Location>
+  <History>
+    Shirley got pissed off from working so hard.
+  </History>
+  <ContactInfo>
+    <Telephone>1 800 733 2767</Telephone>
+    <Fax>202 303 4498</Fax>
+    <Email>shirley@example.com</Email>
+    <PostalAddress>
+      <StreetAddress>2025 E Street</StreetAddress>
+      <Locality>Washinton</Locality>
+      <Region>DC</Region>
+      <PostalCode>20006</PostalCode>
+      <Country>United States</Country>
+    </PostalAddress>
+  </ContactInfo>
+  <ExternalResources>
+    <ImageURL>http://carladavisshow.com/wp-content/uploads/2012/11/red-cross1.jpg</ImageURL>
+  </ExternalResources>
+</Organization>
+
+<Person personIdent="SLi">
+  <Name>
+    <FirstName>Shirley</FirstName>
+    <LastName>Li</LastName>
+  </Name>
+  <Kind personKindIdent="PR"/>
+  <Location>
+    <Locality>Houston</Locality>
+    <Region>Texas</Region>
+    <Country>United States</Country>
+  </Location>
+  <ExternalResources>
+    <ImageURL>https://sphotos-a.xx.fbcdn.net/hphotos-snc6/249035_10150943750989530_1854017333_n.jpg</ImageURL>
+  </ExternalResources>
+</Person>
+
+<CrisisKind crisisKindIdent="WAR">
+  <Name>War</Name>
+  <Description>An organized and often prolonged conflict that is carried out by states and/or non-state actors.</Description>
+</CrisisKind>
+
+<OrganizationKind organizationKindIdent="HO">
+  <Name>Humanitarian Organization</Name>
+  <Description>Organization that provides humanitarian aid</Description>
+</OrganizationKind>
+
+<PersonKind personKindIdent="PR">
+  <Name>President</Name>
+  <Description>Leader or the government of some countries</Description>
+</PersonKind>
+
+</WorldCrises>
