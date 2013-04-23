@@ -1,3 +1,0 @@
-turnin --list hychyc07 cs327epj4
-23579315    4 drwx------   2 hychyc07 tmpclass     4096 Apr  4 16:45 .
-23579316   52 -rw-r--r--   1 hychyc07 tmpclass    46353 Apr  4 16:37 ./WCDB2.zip
