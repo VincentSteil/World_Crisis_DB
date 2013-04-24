@@ -277,9 +277,10 @@ def WCDB2_import(c, root):
     tup = {"ID" : "", "Name" : "", "Kind" : "", "Location" : [], "StartDateTime" : [], "EndDateTime" : [],
            "HumanImpact" : [], "EconomicImpact" : "", "ResourceNeeded" : [], "WaysToHelp" : [], "ExternalResources" : [],
            "RelatedPersons" : [], "RelatedOrganizations" : []}
-    ordering = ["ID", "Name", "Kind", "Location", "StartDateTime", "EndDateTime",
-           "HumanImpact", "EconomicImpact", "ResourceNeeded", "WaysToHelp", "ExternalResources",
-           "RelatedPersons", "RelatedOrganizations"]
+    ordering = ["ID", "Name", "Kind", "StartDateTime", "EndDateTime",
+            "EconomicImpact"]
+    orderingLoc = ["Locality", "Region", "Country"]
+    transER = {"ImageURL" : "IMAGE", "VideoURL" : "VIDEO", "MapURL":"MAP", "SocialNetworkURL":"SOCIAL_NETWORK", "Citation":"CITATION", "ExternalLinkURL":"EXTERNAL_LINK"}
     tup["ID"]=crisis.attrib.values()[0]
     
     for i in crisis :
@@ -303,7 +304,7 @@ def WCDB2_import(c, root):
         else:
           tup[i.tag]=[i.find("Date").text]
       elif i.tag=="HumanImpact":
-        tup[i.tag]+=[i.find("Type").text, i.find("Number").text]
+        tup[i.tag].append([i.find("Type").text, i.find("Number").text])
       elif i.tag=="ExternalResources":
         tup[i.tag]=[]
         for j in i.iter():
@@ -314,19 +315,63 @@ def WCDB2_import(c, root):
         for j in i.iter():
           if j.tag!=i.tag:
             tup[i.tag]+=[j.attrib.values()[0]]
-    ret = list()
+
+
+    ret = ["NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL"]
+    cttr=0;
     for h in ordering:
-      ret.append(str(tup[h]))
-    query(c, "insert into Crises values " + str(tuple(ret)) + ";")
-  
+      if h=="StartDateTime" or h=="EndDateTime":
+        tit=cttr+2
+        for kk in tup[h]:
+          ret[cttr]=kk
+          cttr+=1
+        cttr=tit
+      else:
+        ret[cttr]=(str(tup[h]))
+        cttr+=1
+    query(c, "delete from Crisis where id = \"" + ret[0] + "\";")
+    query(c, "insert into Crisis values " + str(tuple(ret)).replace("\"NULL\"", "NULL") + ";")
+    for l in tup["Location"]:
+        retLoc=[]
+        
+        for h in orderingLoc:
+            if h in l.keys():
+                retLoc.append(l[h])
+            else:
+                retLoc.append("NULL");
+        print retLoc
+        query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('C', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
+    """ 
+    <w><Crisis id="ss"><Location><Locality>dd</Locality></Location><HumanImpact><Type>kali</Type><Number>123</Number></HumanImpact><ResourceNeeded>cat</ResourceNeeded><ResourceNeeded>dog</ResourceNeeded>
+     <ExternalResources><ImageURL>Bal</ImageURL><MapURL>Cyryl</MapURL></ExternalResources></Crisis>
+     <Organization id="cela"><Name>Harpuny</Name><RelatedPersons><RelatedPerson vit="e"/></RelatedPersons></Organization>
+     <Person id="e"><Name><FirstName>Jacenty</FirstName><Suffix>Baster</Suffix></Name></Person>
+     <CrisisKind id="a"><Name>Habsburg</Name></CrisisKind>
+     </w>
+    """
+    print query(c, "select * from ExternalResource;")
+    for l in tup["HumanImpact"]:
+        query(c, "insert into HumanImpact (crisis_id, type, number) values (\""+ret[0]+"\", \""+l[0]+"\", "+l[1]+");")
+    for l in tup["ResourceNeeded"]:
+        query(c, "insert into ResourceNeeded (crisis_id, description) values (\""+ret[0]+"\", \""+l+"\");")
+    for l in tup["WaysToHelp"]:
+        query(c, "insert into WaysToHelp (crisis_id, description) values (\""+ret[0]+"\", \""+l+"\");")
+    for l in tup["ExternalResources"]:
+        query(c, "insert into ExternalResource (entity_type, entity_id, type, link) values ('C', \""+ret[0]+"\", '"+transER[l[0]]+"', \""+l[1]+"\");")
+    for l in tup["RelatedOrganizations"]:
+        query(c, "insert into CrisisOrganization (id_crisis, id_organization) values (\""+ret[0]+"\", \""+l+"\");")
+    for l in tup["RelatedPersons"]:
+        query(c, "insert into PersonCrisis (id_person, id_crisis) values (\""+l+"\", \""+ret[0]+"\");")
+    print query(c, "select * from ExternalResource;")
+    print "Caro"
    #Orgs
   for crisis in root.findall('Organization'):
     tup = {"ID" : "", "Name" : "", "Kind" : "", "Location" : [], "History" : "", "Telephone" : "",
            "Fax" : "", "Email" : "", "StreetAddress" : "", "Locality" : "", "Region" : "",
            "PostalCode" : "", "Country" : "", "ExternalResources" : [], "RelatedPersons" : [], "RelatedCrises" : []}
-    ordering = ["ID", "Name", "Kind", "Location", "History", "Telephone",
+    ordering = ["ID", "Name", "Kind", "History", "Telephone",
            "Fax", "Email", "StreetAddress", "Locality", "Region",
-           "PostalCode", "Country", "ExternalResources", "RelatedPersons", "RelatedCrises"]
+           "PostalCode", "Country"]
     tup["ID"]=crisis.attrib.values()[0]
     
     for i in crisis :
@@ -359,16 +404,35 @@ def WCDB2_import(c, root):
         for j in i.iter():
           if j.tag!=i.tag:
             tup[i.tag]+=[j.attrib.values()[0]]
-    ret = list()
+
+    ret = ["NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL"]
+    cttr=0;
     for h in ordering:
-      ret.append(str(tup[h]))
-    query(c, "insert into Organizations values " + str(tuple(ret)) + ";")  
+        ret[cttr]=(str(tup[h]))
+        cttr+=1;
+    query(c, "delete from Organization where id = \"" + ret[0] + "\";")
+    query(c, "insert into Organization values " + str(tuple(ret)).replace("\"NULL\"", "NULL") + ";")
+    for l in tup["Location"]:
+        retLoc=[]
+        
+        for h in orderingLoc:
+            if h in l.keys():
+                retLoc.append(l[h])
+            else:
+                retLoc.append("NULL");
+        print retLoc
+        query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('C', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
+    for l in tup["ExternalResources"]:
+        query(c, "insert into ExternalResource (entity_type, entity_id, type, link) values ('C', \""+ret[0]+"\", '"+transER[l[0]]+"', \""+l[1]+"\");")
+    for l in tup["RelatedPersons"]:
+        query(c, "insert into OrganizationPerson (id_organization, id_person) values (\""+ret[0]+"\", \""+l+"\");")
+    print query(c, "select * from OrganizationPerson;")
+    print "Halter"
     #persons
   for crisis in root.findall('Person'):
     tup = {"ID" : "", "FirstName" : "", "MiddleName" : "", "LastName" : "", "Suffix" : "", "Kind" : "", "Location" : [],
            "ExternalResources" : [], "RelatedCrises" : [], "RelatedOrganizations" : []}
-    ordering = ["ID", "FirstName", "MiddleName", "LastName", "Suffix", "Kind", "Location", "ExternalResources",
-           "RelatedCrises", "RelatedOrganizations"]
+    ordering = ["ID", "FirstName", "MiddleName", "LastName", "Suffix", "Kind"]
     tup["ID"]=crisis.attrib.values()[0]
     
     for i in crisis :
@@ -400,11 +464,29 @@ def WCDB2_import(c, root):
         for j in i.iter():
           if j.tag!=i.tag:
             tup[i.tag]+=[j.attrib.values()[0]]
-    
-    ret = list()
+
+    ret = ["NULL", "NULL", "NULL", "NULL", "NULL", "NULL"]
+    cttr=0;
     for h in ordering:
-      ret.append(str(tup[h]))
-    query(c, "insert into Persons values " + str(tuple(ret)) + ";")
+        if len(tup[h])>0:
+            ret[cttr]=(str(tup[h]))
+        cttr+=1;
+    query(c, "delete from Person where id = \"" + ret[0] + "\";")
+    query(c, "insert into Person values " + str(tuple(ret)).replace("\"NULL\"", "NULL") + ";")
+    for l in tup["Location"]:
+        retLoc=[]
+        
+        for h in orderingLoc:
+            if h in l.keys():
+                retLoc.append(l[h])
+            else:
+                retLoc.append("NULL");
+        print retLoc
+        query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('C', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
+    for l in tup["ExternalResources"]:
+        query(c, "insert into ExternalResource (entity_type, entity_id, type, link) values ('C', \""+ret[0]+"\", '"+transER[l[0]]+"', \""+l[1]+"\");")
+    print query(c, "select * from Person;")
+    print "Pert"
   #Crisis kinds
   for crisis in root.findall('CrisisKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
@@ -417,7 +499,9 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    query(c, "insert into CrisisKinds values " + str(tuple(ret)) + ";")
+    query(c, "insert into CrisisKind values " + str(tuple(ret)) + ";")
+    print query(c, "select * from CrisisKind;")
+    print "Johannes"
   #organization kinds
   for crisis in root.findall('OrganizationKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
@@ -430,7 +514,7 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    query(c, "insert into OrgKinds values " + str(tuple(ret)) + ";")
+    query(c, "insert into OrganizationKind values " + str(tuple(ret)) + ";")
   #person kinds
   for crisis in root.findall('PersonKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
@@ -443,7 +527,7 @@ def WCDB2_import(c, root):
     ret = list()
     for h in ordering:
       ret.append(str(tup[h]))
-    query(c, "insert into PersonKinds values " + str(tuple(ret)) + ";")
+    query(c, "insert into PersonKind values " + str(tuple(ret)) + ";")
 
 # -------------
 # WCDB2_export
@@ -677,3 +761,9 @@ def WCDB2_run(r ,w):
 
 c=login()
 WCDB2_setup(c)
+strr = sys.stdin.read()
+assert len(strr)>0
+strr = strr.replace("&", "&amp;")
+tree = ET.parse(StringIO(strr)) #importing the XML
+root = tree.getroot()
+WCDB2_import(c, root)
