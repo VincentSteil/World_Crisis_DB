@@ -330,17 +330,20 @@ def WCDB3_import(c, root):
       else:
         ret[cttr]=(str(tup[h]))
         cttr+=1
+    #print ret[0]
     query(c, "delete from Crisis where id = \"" + ret[0] + "\";")
-    query(c, "insert into Crisis values " + str(tuple(ret)).replace("\"NULL\"", "NULL") + ";")
+    query(c, "insert into Crisis values " + str(tuple(ret)).replace("\"NULL\"", "NULL").replace("None", "''") + ";")
     for l in tup["Location"]:
         retLoc=[]
         
         for h in orderingLoc:
-            if h in l.keys():
+            if h in l.keys() and l[h] is not None:
                 retLoc.append(l[h])
             else:
                 retLoc.append("NULL");
         #print retLoc
+        #print retLoc
+        #print ret[0]
         query(c, "delete from Location where (entity_type = 'C' and entity_id = \""+ret[0]+"\" and locality = \""+retLoc[0]+"\" and region = \""+retLoc[1]+"\" and country = \""+retLoc[2]+"\");")
         query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('C', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
     """ 
@@ -419,12 +422,12 @@ def WCDB3_import(c, root):
         ret[cttr]=(str(tup[h]))
         cttr+=1;
     query(c, "delete from Organization where id = \"" + ret[0] + "\";")
-    query(c, "insert into Organization values " + str(tuple(ret)).replace("\"NULL\"", "NULL") + ";")
+    query(c, "insert into Organization values " + str(tuple(ret)).replace("\"NULL\"", "NULL").replace("None", "''") + ";")
     for l in tup["Location"]:
         retLoc=[]
         
         for h in orderingLoc:
-            if h in l.keys():
+            if h in l.keys() and l[h] is not None:
                 retLoc.append(l[h])
             else:
                 retLoc.append("NULL");
@@ -479,16 +482,17 @@ def WCDB3_import(c, root):
     ret = ["NULL", "NULL", "NULL", "NULL", "NULL", "NULL"]
     cttr=0;
     for h in ordering:
+     if tup[h] is not None:
         if len(tup[h])>0:
             ret[cttr]=(str(tup[h]))
         cttr+=1;
     query(c, "delete from Person where id = \"" + ret[0] + "\";")
-    query(c, "insert into Person values " + str(tuple(ret)).replace("\"NULL\"", "NULL") + ";")
+    query(c, "insert into Person values " + str(tuple(ret)).replace("\"NULL\"", "NULL").replace("None", "''") + ";")
     for l in tup["Location"]:
         retLoc=[]
         
         for h in orderingLoc:
-            if h in l.keys():
+            if h in l.keys() and l[h] is not None:
                 retLoc.append(l[h])
             else:
                 retLoc.append("NULL");
@@ -769,6 +773,7 @@ def WCDB3_run(r ,w):
   strr=r.read()
   assert len(strr)>0
   strr = strr.replace("&", "&amp;")
+  strr = strr.replace("<?xml version=\"1.0\" ?>", "")
   strr = "<qq>"+strr+"</qq>"
   tree = ET.parse(StringIO(strr)) #importing the XML
   root = tree.getroot()
