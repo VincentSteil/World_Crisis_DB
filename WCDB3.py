@@ -160,7 +160,7 @@ region char(100),
 country char(100)
 );
   """)
-  print "Paszyn"
+  #print "Paszyn"
 
   t = query(c, """    
     CREATE TABlE HumanImpact (
@@ -340,7 +340,7 @@ def WCDB3_import(c, root):
                 retLoc.append(l[h])
             else:
                 retLoc.append("NULL");
-        print retLoc
+        #print retLoc
         query(c, "delete from Location where (entity_type = 'C' and entity_id = \""+ret[0]+"\" and locality = \""+retLoc[0]+"\" and region = \""+retLoc[1]+"\" and country = \""+retLoc[2]+"\");")
         query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('C', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
     """ 
@@ -351,7 +351,7 @@ def WCDB3_import(c, root):
      <CrisisKind id="a"><Name>Habsburg</Name></CrisisKind>
      </w>
     """
-    print query(c, "select * from ExternalResource;")
+    #print query(c, "select * from ExternalResource;")
     for l in tup["HumanImpact"]:
         query(c, "delete from HumanImpact where (crisis_id = \""+ret[0]+"\" and type = \""+l[0]+"\" and number = \""+l[1]+"\");")
         query(c, "insert into HumanImpact (crisis_id, type, number) values (\""+ret[0]+"\", \""+l[0]+"\", "+l[1]+");")
@@ -370,8 +370,8 @@ def WCDB3_import(c, root):
     for l in tup["RelatedPersons"]:
         query(c, "delete from PersonCrisis where (id_crisis = \""+ret[0]+"\" and id_person = \""+l+"\");")
         query(c, "insert into PersonCrisis (id_person, id_crisis) values (\""+l+"\", \""+ret[0]+"\");")
-    print query(c, "select * from ExternalResource;")
-    print "Caro"
+    #print query(c, "select * from ExternalResource;")
+    #print "Caro"
    #Orgs
   for crisis in root.iter('Organization'):
     tup = {"ID" : "", "Name" : "", "Kind" : "", "Location" : [], "History" : "", "Telephone" : "",
@@ -428,7 +428,7 @@ def WCDB3_import(c, root):
                 retLoc.append(l[h])
             else:
                 retLoc.append("NULL");
-        print retLoc
+        #print retLoc
         query(c, "delete from Location where (entity_type = 'O' and entity_id = \""+ret[0]+"\" and locality = \""+retLoc[0]+"\" and region = \""+retLoc[1]+"\" and country = \""+retLoc[2]+"\");")
         query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('O', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
     for l in tup["ExternalResources"]:
@@ -437,8 +437,8 @@ def WCDB3_import(c, root):
     for l in tup["RelatedPersons"]:
         query(c, "delete from OrganizationPerson where (id_person = \""+l+"\" and id_organization = \""+ret[0]+"\");")
         query(c, "insert into OrganizationPerson (id_organization, id_person) values (\""+ret[0]+"\", \""+l+"\");")
-    print query(c, "select * from OrganizationPerson;")
-    print "Halter"
+    #print query(c, "select * from OrganizationPerson;")
+    #print "Halter"
     #persons
   for crisis in root.iter('Person'):
     tup = {"ID" : "", "FirstName" : "", "MiddleName" : "", "LastName" : "", "Suffix" : "", "Kind" : "", "Location" : [],
@@ -492,16 +492,16 @@ def WCDB3_import(c, root):
                 retLoc.append(l[h])
             else:
                 retLoc.append("NULL");
-        print retLoc
+        #print retLoc
         query(c, "delete from Location where (entity_type = 'P' and entity_id = \""+ret[0]+"\" and locality = \""+retLoc[0]+"\" and region = \""+retLoc[1]+"\" and country = \""+retLoc[2]+"\");")
         query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('P', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
     for l in tup["ExternalResources"]:
         query(c, "delete from ExternalResource where (entity_type= 'C' and entity_id = \""+ret[0]+"\" and type = \""+transER[l[0]]+"\" and link = \""+l[1]+"\");")
         query(c, "insert into ExternalResource (entity_type, entity_id, type, link) values ('P', \""+ret[0]+"\", '"+transER[l[0]]+"', \""+l[1]+"\");")
-    print query(c, "select * from Person;")
-    print "Pert"
+    #print query(c, "select * from Person;")
+    #print "Pert"
   #Crisis kinds
-  for crisis in root.findall('CrisisKind'):
+  for crisis in root.iter('CrisisKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
     ordering = ["ID", "Name", "Description"]
     tup["ID"]=crisis.attrib.values()[0]
@@ -514,10 +514,10 @@ def WCDB3_import(c, root):
       ret.append(str(tup[h]))
     query(c, "delete from CrisisKind where id = \"" + ret[0] + "\";")
     query(c, "insert into CrisisKind values " + str(tuple(ret)) + ";")
-    print query(c, "select * from CrisisKind;")
-    print "Johannes"
+    #print query(c, "select * from CrisisKind;")
+    #print "Johannes"
   #organization kinds
-  for crisis in root.findall('OrganizationKind'):
+  for crisis in root.iter('OrganizationKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
     ordering = ["ID", "Name", "Description"]
     tup["ID"]=crisis.attrib.values()[0]
@@ -531,7 +531,7 @@ def WCDB3_import(c, root):
     query(c, "delete from OrganizationKind where id = \"" + ret[0] + "\";")
     query(c, "insert into OrganizationKind values " + str(tuple(ret)) + ";")
   #person kinds
-  for crisis in root.findall('PersonKind'):
+  for crisis in root.iter('PersonKind'):
     tup = {"ID" : "", "Name" : "", "Description" : ""}
     ordering = ["ID", "Name", "Description"]
     tup["ID"]=crisis.attrib.values()[0]
@@ -766,10 +766,10 @@ def WCDB3_run(r ,w):
      <CrisisKind id="a"><Name>Habsburg</Name></CrisisKind>
      </w>
     """
-  #strr=r.read()
+  strr=r.read()
   assert len(strr)>0
   strr = strr.replace("&", "&amp;")
-  strr = "<qq>"+strr+strr+"</qq>"
+  strr = "<qq>"+strr+"</qq>"
   tree = ET.parse(StringIO(strr)) #importing the XML
   root = tree.getroot()
   WCDB3_import(c, root)
