@@ -165,6 +165,24 @@ group by country;
 5. What is the most common resource needed?
 */
 
+create temporary table Resource_Count as
+	select description, count(*) as count
+	from ResourceNeeded
+	group by description;
+	
+create temporary table Resource_Count2 as
+	select description, count(*) as count
+	from ResourceNeeded
+	group by description;
+	
+select description, count
+from Resource_Count
+where not exists (
+	select *
+	from Resource_Count2
+	where Resource_Count.count < Resource_Count2.count
+	);
+
 /*
 6. How many persons are related to crises located in countries other than their own?
 */
