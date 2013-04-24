@@ -421,9 +421,9 @@ def WCDB2_import(c, root):
             else:
                 retLoc.append("NULL");
         print retLoc
-        query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('C', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
+        query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('O', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
     for l in tup["ExternalResources"]:
-        query(c, "insert into ExternalResource (entity_type, entity_id, type, link) values ('C', \""+ret[0]+"\", '"+transER[l[0]]+"', \""+l[1]+"\");")
+        query(c, "insert into ExternalResource (entity_type, entity_id, type, link) values ('O', \""+ret[0]+"\", '"+transER[l[0]]+"', \""+l[1]+"\");")
     for l in tup["RelatedPersons"]:
         query(c, "insert into OrganizationPerson (id_organization, id_person) values (\""+ret[0]+"\", \""+l+"\");")
     print query(c, "select * from OrganizationPerson;")
@@ -482,9 +482,9 @@ def WCDB2_import(c, root):
             else:
                 retLoc.append("NULL");
         print retLoc
-        query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('C', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
+        query(c, "insert into Location (entity_type, entity_id, locality, region, country) values ('P', \""+ret[0]+"\","+str(retLoc)[1:-1].replace("\"NULL\"", "NULL") +");")
     for l in tup["ExternalResources"]:
-        query(c, "insert into ExternalResource (entity_type, entity_id, type, link) values ('C', \""+ret[0]+"\", '"+transER[l[0]]+"', \""+l[1]+"\");")
+        query(c, "insert into ExternalResource (entity_type, entity_id, type, link) values ('P', \""+ret[0]+"\", '"+transER[l[0]]+"', \""+l[1]+"\");")
     print query(c, "select * from Person;")
     print "Pert"
   #Crisis kinds
@@ -538,163 +538,154 @@ def WCDB2_export(c):
   This function exports the MySQL database to XML file
   c is a mysql connection
   """
+  transER = {"IMAGE" :"ImageURL", "VIDEO":"VideoURL" , "MAP":"MapURL", "SOCIAL_NETWORK":"SocialNetworkURL", "CITATION":"Citation", "EXTERNAL_LINK":"ExternalLinkURL"}
   ret = ET.Element("WorldCrises")
       #exports crises
-  t = query(c, "select * from Crises;")
+  t = query(c, "select * from Crisis;")
   for i in t :
     temp = ET.SubElement(ret, "Crisis", {"crisisIdent" : i[0]})
     n=ET.SubElement(temp, "Name")
     n.text=i[1]
     n=ET.SubElement(temp, "Kind", {"crisisKindIdent" : i[2]})
-    for j in ast.literal_eval(i[3]):
+    for j in query(c, "select * from Location where entity_type = 'C' and entity_id = \""+i[0]+"\";"):
       m=ET.SubElement(temp, "Location")
       order = ["Locality", "Region", "Country"]
-      for k in order:
-        if k in j:
-          n=ET.SubElement(m, k)
-          n.text=j[k]
+      for k in range(0, 3):
+        if j[k+3] != "NULL" and len(j[k+3])>0:
+          n=ET.SubElement(m, order[k])
+          n.text=j[k+3]
     m=ET.SubElement(temp, "StartDateTime")
-    ii=ast.literal_eval(i[4])
     n=ET.SubElement(m, "Date")
-    if len(ii)>0:
-      n.text=ii[0]
-    if len(ii)==2:
+    if i[3]!="NULL" and len(i[3])>0:
+      n.text=i[3]
+    if i[4]!="NULL" and len(i[4])>0:
       n=ET.SubElement(m, "Time")
-      n.text=ii[1]
-    
-    ii=ast.literal_eval(i[5])
-    if len(ii)>0 :
+      n.text=i[4]
+    if i[5]!="NULL" and len(i[5])>0:
       m=ET.SubElement(temp, "EndDateTime")
       n=ET.SubElement(m, "Date")
-      n.text=ii[0]
-      if len(ii)==2:
+      n.text=i[5]
+      if i[6]!="NULL" and len(i[6])>0:
         n=ET.SubElement(m, "Time")
-        n.text=ii[1]
+        n.text=i[6]
 
-    ii=ast.literal_eval(i[6])
-    if len(ii)>0 :
+    for j in query(c, "select * from HumanImpact where crisis_id = \""+i[0]+"\";"):
       m=ET.SubElement(temp, "HumanImpact")
       n=ET.SubElement(m, "Type")
-      n.text=ii[0]
+      n.text=j[2]
       n=ET.SubElement(m, "Number")
-      n.text=ii[1]
+      n.text=j[3]
     n=ET.SubElement(temp, "EconomicImpact")
     n.text=i[7]
-    ii=ast.literal_eval(i[8])
-    for j in ii:
+    for j in query(c, "select * from ResourceNeeded where crisis_id = \""+i[0]+"\";"):
       n=ET.SubElement(temp, "ResourceNeeded")
-      n.text=j
-    ii=ast.literal_eval(i[9])
-    for j in ii:
+      n.text=j[2]
+    for j in query(c, "select * from WaysToHelp where crisis_id = \""+i[0]+"\";"):
       n=ET.SubElement(temp, "WaysToHelp")
-      n.text=j
+      n.text=j[2]
     m=ET.SubElement(temp, "ExternalResources")
-    ii=ast.literal_eval(i[10])
-    for j in ii:
-      n=ET.SubElement(m, j[0])
-      n.text=j[1]
+    for j in query(c, "select * from ExternalResource where entity_type = 'C' and entity_id = \""+i[0]+"\";"):
+      n=ET.SubElement(m, transER[j[3]])
+      n.text=j[4]
+    if len(query(c, "select * from PersonCrisis where id_crisis = \""+i[0]+"\";"))>0:
+        m=ET.SubElement(temp, "RelatedPersons")
+    for j in query(c, "select * from PersonCrisis where id_crisis = \""+i[0]+"\";"):
+         n=ET.SubElement(m, "RelatedPerson", {"personIdent":j[0]})
 
-    ii=ast.literal_eval(i[11])
-    if len(ii)>0:
-      m=ET.SubElement(temp, "RelatedPersons")
-      for j in ii:
-         n=ET.SubElement(m, "RelatedPerson", {"personIdent":j})
-        
-    ii=ast.literal_eval(i[12])
-    if len(ii)>0:
-      m=ET.SubElement(temp, "RelatedOrganizations")
-      for j in ii:
-         n=ET.SubElement(m, "RelatedOrganization", {"organizationIdent":j})
+    if len(query(c, "select * from CrisisOrganization where id_crisis = \""+i[0]+"\";"))>0:
+        m=ET.SubElement(temp, "RelatedOrganizations")
+    for j in query(c, "select * from CrisisOrganization where id_crisis = \""+i[0]+"\";"):
+         n=ET.SubElement(m, "RelatedOrganization", {"organizationIdent":j[1]})
+
         #exports organizations
-  t = query(c, "select * from Organizations;")
+  t = query(c, "select * from Organization;")
   for i in t :
     temp = ET.SubElement(ret, "Organization", {"organizationIdent" : i[0]})
     n=ET.SubElement(temp, "Name")
     n.text=i[1]
     n=ET.SubElement(temp, "Kind", {"organizationKindIdent" : i[2]})
-    for j in ast.literal_eval(i[3]):
+    for j in query(c, "select * from Location where entity_type = 'O' and entity_id = \""+i[0]+"\";"):
       m=ET.SubElement(temp, "Location")
       order = ["Locality", "Region", "Country"]
-      for k in order:
-        if k in j:
-          n=ET.SubElement(m, k)
-          n.text=j[k]
+      for k in range(0, 3):
+        if j[k+3] != "NULL" and len(j[k+3])>0:
+          n=ET.SubElement(m, order[k])
+          n.text=j[k+3]
     n=ET.SubElement(temp, "History")
-    n.text=i[4]
+    n.text=i[3]
     m=ET.SubElement(temp, "ContactInfo")
     n=ET.SubElement(m, "Telephone")
-    n.text=i[5]
+    n.text=i[4]
     n=ET.SubElement(m, "Fax")
-    n.text=i[6]
+    n.text=i[5]
     n=ET.SubElement(m, "Email")
-    n.text=i[7]
+    n.text=i[6]
     n=ET.SubElement(m, "PostalAddress")
     o=ET.SubElement(n, "StreetAddress")
-    o.text=i[8]
+    o.text=i[7]
     o=ET.SubElement(n, "Locality")
-    o.text=i[9]
+    o.text=i[8]
     o=ET.SubElement(n, "Region")
-    o.text=i[10]
+    o.text=i[9]
     o=ET.SubElement(n, "PostalCode")
-    o.text=i[11]
+    o.text=i[10]
     o=ET.SubElement(n, "Country")
-    o.text=i[12]
+    o.text=i[11]
     m=ET.SubElement(temp, "ExternalResources")
-    ii=ast.literal_eval(i[13])
-    for j in ii:
-      n=ET.SubElement(m, j[0])
-      n.text=j[1]
-    ii=ast.literal_eval(i[14])
-    if len(ii)>0:
-      m=ET.SubElement(temp, "RelatedCrises")
-      for j in ii:
-         n=ET.SubElement(m, "RelatedCrisis", {"crisisIdent":j})
-        
-    ii=ast.literal_eval(i[15])
-    if len(ii)>0:
-      m=ET.SubElement(temp, "RelatedPersons")
-      for j in ii:
-         n=ET.SubElement(m, "RelatedPerson", {"personIdent":j})
+    for j in query(c, "select * from ExternalResource where entity_type = 'O' and entity_id = \""+i[0]+"\";"):
+      n=ET.SubElement(m, transER[j[3]])
+      n.text=j[4]
+
+    if len(query(c, "select * from CrisisOrganization where id_organization = \""+i[0]+"\";"))>0:
+        m=ET.SubElement(temp, "RelatedOrganizations")
+    for j in query(c, "select * from CrisisOrganization where id_organization = \""+i[0]+"\";"):
+         n=ET.SubElement(m, "RelatedOrganization", {"crisisIdent":j[0]})
+
+    if len(query(c, "select * from OrganizationPerson where id_organization = \""+i[0]+"\";"))>0:
+        m=ET.SubElement(temp, "RelatedPersons")
+    for j in query(c, "select * from OrganizationPerson where id_organization = \""+i[0]+"\";"):
+         n=ET.SubElement(m, "RelatedPerson", {"personIdent":j[1]})
+
         #exports persons
-  t = query(c, "select * from Persons;")
+  t = query(c, "select * from Person;")
   for i in t :
     temp = ET.SubElement(ret, "Person", {"personIdent" : i[0]})
     m=ET.SubElement(temp, "Name")
     n=ET.SubElement(m, "FirstName")
     n.text=i[1]
-    if len(i[2])>0:
+    if i[2]!="NULL" and len(i[2])>0:
       n=ET.SubElement(m, "MiddleName")
       n.text=i[2]
     n=ET.SubElement(m, "LastName")
     n.text=i[3]
-    if len(i[4])>0:
+    if i[4]!="NULL" and len(i[4])>0:
       n=ET.SubElement(m, "Suffix")
       n.text=i[4]
     n=ET.SubElement(temp, "Kind", {"personKindIdent" : i[5]})
-    for j in ast.literal_eval(i[6]):
+    for j in query(c, "select * from Location where entity_type = 'P' and entity_id = \""+i[0]+"\";"):
       m=ET.SubElement(temp, "Location")
       order = ["Locality", "Region", "Country"]
-      for k in order:
-        if k in j:
-          n=ET.SubElement(m, k)
-          n.text=j[k]
+      for k in range(0, 3):
+        if j[k+3] != "NULL" and len(j[k+3])>0:
+          n=ET.SubElement(m, order[k])
+          n.text=j[k+3]
     m=ET.SubElement(temp, "ExternalResources")
-    ii=ast.literal_eval(i[7])
-    for j in ii:
-      n=ET.SubElement(m, j[0])
-      n.text=j[1]
-    ii=ast.literal_eval(i[8])
-    if len(ii)>0:
-      m=ET.SubElement(temp, "RelatedCrises")
-      for j in ii:
-         n=ET.SubElement(m, "RelatedCrisis", {"crisisIdent":j})
-    ii=ast.literal_eval(i[9])
-    if len(ii)>0:
-      m=ET.SubElement(temp, "RelatedOrganizations")
-      for j in ii:
-         n=ET.SubElement(m, "RelatedOrganization", {"organizationIdent":j})
+    for j in query(c, "select * from ExternalResource where entity_type = 'P' and entity_id = \""+i[0]+"\";"):
+      n=ET.SubElement(m, transER[j[3]])
+      n.text=j[4]
+
+    if len(query(c, "select * from PersonCrisis where id_person = \""+i[0]+"\";"))>0:
+        m=ET.SubElement(temp, "RelatedPersons")
+    for j in query(c, "select * from PersonCrisis where id_person = \""+i[0]+"\";"):
+         n=ET.SubElement(m, "RelatedPerson", {"crisisIdent":j[1]})
+
+    if len(query(c, "select * from OrganizationPerson where id_organization = \""+i[0]+"\";"))>0:
+        m=ET.SubElement(temp, "RelatedPersons")
+    for j in query(c, "select * from OrganizationPerson where id_organization = \""+i[0]+"\";"):
+         n=ET.SubElement(m, "RelatedPerson", {"organizationIdent":j[0]})
+
         #exports CrisisKinds
-  t = query(c, "select * from CrisisKinds;")
+  t = query(c, "select * from CrisisKind;")
   for i in t :
     temp = ET.SubElement(ret, "CrisisKind", {"crisisKindIdent" : i[0]})
     n=ET.SubElement(temp, "Name")
@@ -702,7 +693,7 @@ def WCDB2_export(c):
     n=ET.SubElement(temp, "Description")
     n.text=i[2]
         #exports OrgKinds
-  t = query(c, "select * from OrgKinds;")
+  t = query(c, "select * from OrganizationKind;")
   for i in t :
     temp = ET.SubElement(ret, "OrganizationKind", {"organizationKindIdent" : i[0]})
     n=ET.SubElement(temp, "Name")
@@ -710,7 +701,7 @@ def WCDB2_export(c):
     n=ET.SubElement(temp, "Description")
     n.text=i[2]
         #exports PersonKinds
-  t = query(c, "select * from PersonKinds;")
+  t = query(c, "select * from PersonKind;")
   for i in t :
     temp = ET.SubElement(ret, "PersonKind", {"personKindIdent" : i[0]})
     n=ET.SubElement(temp, "Name")
@@ -761,9 +752,19 @@ def WCDB2_run(r ,w):
 
 c=login()
 WCDB2_setup(c)
-strr = sys.stdin.read()
+strr = """ 
+    <w><Crisis id="ss"><Location><Locality>dd</Locality><Country>USA</Country></Location><HumanImpact><Type>kali</Type><Number>123</Number></HumanImpact><ResourceNeeded>cat</ResourceNeeded><ResourceNeeded>dog</ResourceNeeded>
+     <ExternalResources><ImageURL>Bal</ImageURL><MapURL>Cyryl</MapURL></ExternalResources></Crisis>
+     <Crisis id="bel"></Crisis>
+     <Organization id="cela"><Name>Harpuny</Name><ContactInfo><Telephone>0800100100</Telephone><PostalAddress></PostalAddress></ContactInfo><RelatedPersons><RelatedPerson vit="e"/></RelatedPersons></Organization>
+     <Person id="e"><Name><FirstName>Jacenty</FirstName><Suffix>Baster</Suffix></Name></Person>
+     <CrisisKind id="a"><Name>Habsburg</Name></CrisisKind>
+     </w>
+    """
 assert len(strr)>0
 strr = strr.replace("&", "&amp;")
 tree = ET.parse(StringIO(strr)) #importing the XML
 root = tree.getroot()
 WCDB2_import(c, root)
+xx=WCDB2_export(c)
+WCDB2_print(sys.stdout, ET.tostring(xx))
