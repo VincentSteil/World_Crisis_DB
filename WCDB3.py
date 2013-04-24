@@ -653,9 +653,9 @@ def WCDB3_export(c):
       n.text=j[4]
 
     if len(query(c, "select * from CrisisOrganization where id_organization = \""+i[0]+"\";"))>0:
-        m=ET.SubElement(temp, "RelatedOrganizations")
+        m=ET.SubElement(temp, "RelatedCrises")
     for j in query(c, "select * from CrisisOrganization where id_organization = \""+i[0]+"\";"):
-         n=ET.SubElement(m, "RelatedOrganization", {"crisisIdent":j[0]})
+         n=ET.SubElement(m, "RelatedCrisis", {"crisisIdent":j[0]})
 
     if len(query(c, "select * from OrganizationPerson where id_organization = \""+i[0]+"\";"))>0:
         m=ET.SubElement(temp, "RelatedPersons")
@@ -691,14 +691,14 @@ def WCDB3_export(c):
       n.text=j[4]
 
     if len(query(c, "select * from PersonCrisis where id_person = \""+i[0]+"\";"))>0:
-        m=ET.SubElement(temp, "RelatedPersons")
+        m=ET.SubElement(temp, "RelatedCrises")
     for j in query(c, "select * from PersonCrisis where id_person = \""+i[0]+"\";"):
-         n=ET.SubElement(m, "RelatedPerson", {"crisisIdent":j[1]})
+         n=ET.SubElement(m, "RelatedCrisis", {"crisisIdent":j[1]})
 
     if len(query(c, "select * from OrganizationPerson where id_organization = \""+i[0]+"\";"))>0:
-        m=ET.SubElement(temp, "RelatedPersons")
+        m=ET.SubElement(temp, "RelatedOrganizations")
     for j in query(c, "select * from OrganizationPerson where id_organization = \""+i[0]+"\";"):
-         n=ET.SubElement(m, "RelatedPerson", {"organizationIdent":j[0]})
+         n=ET.SubElement(m, "RelatedOrganization", {"organizationIdent":j[0]})
 
         #exports CrisisKinds
   t = query(c, "select * from CrisisKind;")
@@ -759,7 +759,7 @@ def WCDB3_run(r ,w):
   WCDB3_setup(c)
   strr = """ 
     <w><Crisis id="ss"><Location><Locality>dd</Locality><Country>USA</Country></Location><HumanImpact><Type>kali</Type><Number>123</Number></HumanImpact><ResourceNeeded>cat</ResourceNeeded><ResourceNeeded>dog</ResourceNeeded>
-     <ExternalResources><ImageURL>Bal</ImageURL><MapURL>Cyryl</MapURL></ExternalResources></Crisis>
+     <ExternalResources><ImageURL>Bal</ImageURL><MapURL>Cyryl</MapURL></ExternalResources><RelatedOrganizations><RelatedOrganization id="cela"/></RelatedOrganizations></Crisis>
      <Crisis id="bel"></Crisis>
      <Organization id="cela"><Name>Harpuny</Name><ContactInfo><Telephone>0800100100</Telephone><PostalAddress></PostalAddress></ContactInfo><RelatedPersons><RelatedPerson vit="e"/></RelatedPersons></Organization>
      <Person id="e"><Name><FirstName>Jacenty</FirstName><Suffix>Baster</Suffix></Name></Person>
