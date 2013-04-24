@@ -282,7 +282,7 @@ where region = 'California';
 
 select entity_id, region
 from Location
-where (entity_type = 'C' and region not null)
+where (entity_type = 'C' and region != 'NULL')
 order by region;
 
 /*
