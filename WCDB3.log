@@ -1,0 +1,558 @@
+commit 5c1bed78f88383a5cdcd3123967f23004a07673a
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 16:55:07 2013 -0500
+
+    Documentation - pydoc(WCDB3.html) added
+
+commit 889419d2d69dbfb767eb100107b5139b8dedd793
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 16:47:33 2013 -0500
+
+    Renamed the UML diagram to fit the convention required
+
+commit 3562a096fff102b79ff2083dc640c453aae62fc5
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 16:44:21 2013 -0500
+
+    Output of export from MySQL when DB is populated
+
+commit 872bdf912ad838532983599fd9bef5dc0c0c800a
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 16:38:08 2013 -0500
+
+    full.xml containing all groups' data added
+
+commit 115996464792ba022e2cf86b2f3d29ac474e65cb
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 16:37:29 2013 -0500
+
+    Acceptance tests added
+
+commit 2c4b4380b2a15f88df5c6e12bd7ec6b0713ad91e
+Merge: 94874a3 5029203
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 16:36:48 2013 -0500
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb.git
+
+commit 94874a3c5b8ec35bc8892ad8ba2ce404967a83dd
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 16:36:26 2013 -0500
+
+    Minor bugs in WCDB3.py fixed
+
+commit 50292038aefc1a070a019b09d0fc76f27813c07d
+Author: wjg374 <wgenerous@gmail.com>
+Date:   Wed Apr 24 15:59:46 2013 -0500
+
+    UML diagram
+    
+    someone else see if this looks correct...
+
+commit 6cd19212944adc50dceaf6441beb51e55cf72bb6
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 03:33:56 2013 -0500
+
+    Corrected some spelling errors
+
+commit f882a4b02427109329b4d82a6dcea56ff0ca4136
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 03:24:43 2013 -0500
+
+    Added unit tests. Unit tests passed.
+
+commit 8404acf6e3a920090cb89189b843954a36f0df2a
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 03:01:50 2013 -0500
+
+    Added RunWCDB3.py
+
+commit c614bc8ba8cb20a357217747c22625be18dafee5
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 03:00:49 2013 -0500
+
+    Handling repetitions on the input added.
+
+commit 6838b8ec468814cbce1f3522602d8898b1731ca7
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 02:05:17 2013 -0500
+
+    Changed names to WCDB3
+
+commit 26b292235ec2c6403a3770acb895727665feb136
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 24 01:55:03 2013 -0500
+
+    Export is working too now
+
+commit ca4785b8a1c9fa3b5c03e8b388190d37464baf5a
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 23 23:08:00 2013 -0500
+
+    Import to SQL from XML works
+
+commit c867d5b488742b215065ae7d0b1a81f27b4a915e
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 23 00:47:29 2013 -0500
+
+    Making order in the repo 2 - all deleted files now in folder Old stuff
+
+commit 2b15dad2730e88afde44ef592b5e706a1c670f38
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 23 00:45:49 2013 -0500
+
+    Making order in the repo
+
+commit 54b928d7ddc24a9fea05dbfed4a1dafce5c972e3
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 23 00:26:22 2013 -0500
+
+    Added first version and kinda draft of WCDB3.py
+
+commit f4794536ad401a31b2678a03c2702d258ab2acf4
+Author: iwo <iwo@cs.utexas.edu>
+Date:   Thu Apr 4 16:51:03 2013 -0500
+
+    WCDB2.zip added
+
+commit 1a0649e9016e217e5bef9731c6013b4b766bb624
+Author: iwo <iwo@cs.utexas.edu>
+Date:   Thu Apr 4 16:48:32 2013 -0500
+
+    Confirmation of submission of Project4 - confirmation4.txt
+
+commit 827b1d7c53164b2414116052181d8579dedc7830
+Author: mduban <iwo@utexas.edu>
+Date:   Thu Apr 4 14:46:35 2013 -0500
+
+    Renamed UML diagram to WCDB2.pdf
+
+commit 2fa1ec599de28f46fa9c1fba0f9aa8ec211e0443
+Author: wjg374 <wgenerous@gmail.com>
+Date:   Thu Apr 4 02:58:32 2013 -0500
+
+    UML Class Diagram
+
+commit acb11d0216b310682135939cc141f68287ee9a9c
+Author: wjg374 <wgenerous@gmail.com>
+Date:   Thu Apr 4 02:55:43 2013 -0500
+
+    UML Class Diagram
+
+commit 5b31fa99b49cd396654f47260805fa9a6583d189
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 20:10:22 2013 -0500
+
+    Makefile updated to Project4
+
+commit 8dda1d276f7993fa7ef0233f8d9c843c7d0ef7bd
+Author: iwo <iwo@cs.utexas.edu>
+Date:   Wed Apr 3 20:04:40 2013 -0500
+
+    Git log of commits added (WCDB2.log)
+
+commit e3a46ca7720be4f766c31251a3483faa194396bb
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 19:58:29 2013 -0500
+
+    Asks for user data for databases when starts running now
+
+commit 1f62f538006a0e58631de9799441c378a9335b15
+Author: iwo <iwo@cs.utexas.edu>
+Date:   Wed Apr 3 19:50:12 2013 -0500
+
+    Added pydoc for WCDB2.py
+
+commit 776ad418ac12a77b159fa75c28b28e1b605973f8
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 19:38:10 2013 -0500
+
+    Added comments to WCDB2.py
+
+commit 33fe2eae98a218177898dc9db971843fb8512a6d
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 19:28:44 2013 -0500
+
+    Output of Acceptance Tests added
+
+commit 03770129f803582ad5a8739957903aa860d6721b
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 16:57:07 2013 -0500
+
+    Debug Related imports and added unit tests and RunWCDB2.py
+
+commit 54759c5bf72162d40b4c97152f9f8f4e42f9ef02
+Merge: eae8d82 3977933
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 16:09:49 2013 -0500
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb.git
+
+commit eae8d82e2ec8d500f1c9e6201b31c44a78bc05b4
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 16:09:25 2013 -0500
+
+    Finished debugging hopefully.
+
+commit 3977933b8174c9d46225a4dc99b4e1b61077956d
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Wed Apr 3 15:30:32 2013 -0500
+
+    All the XML and XSD files are in the repo now. Could someone upload them
+    to the public repo when the python files we need to upload are done as
+    well? My cs username: vjs432
+
+commit 82ab433c454528ddbd6918fd7878d8f5b3b1587a
+Merge: a4c8778 7d840b5
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 14:33:56 2013 -0500
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb.git
+
+commit a4c87787fce579435006919ae3ab224b90064fcd
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 14:33:51 2013 -0500
+
+    Some small bugs fixed and few edits to WCDB2.py
+
+commit 7d840b5af8a538d2804086b2e24ac68ec1b772e3
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Wed Apr 3 12:19:27 2013 -0500
+
+    Replaced our XSD with the one provided by the TA
+    Everyone, make sure you used the XSD provided by the TA for the MySQL
+    and UML schema's
+
+commit 7aecee3015ca358ddfdd331f124553d07f96f4e4
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Apr 3 12:08:11 2013 -0500
+
+    finished acceptance tests
+
+commit 36a45dc271aae27af7ee92c1ac585eb7fd9664fa
+Merge: 083c379 24ce879
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Apr 3 10:24:47 2013 -0500
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb
+
+commit 083c379e38bdee6be9c7db9bd37f9458e5d7424f
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Apr 3 10:24:26 2013 -0500
+
+    moved txt files to a folder to minimize clutter
+
+commit 24ce879ba64a87dc698319d0f2cc30828946191b
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 03:47:32 2013 -0500
+
+    Some comments added
+
+commit a2a17ee13f9216c43a0ffd37feacd9e6e536499d
+Merge: 37e210d 56c038a
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 03:42:37 2013 -0500
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb.git
+
+commit 37e210d960f4152ea10db8d663be75d025ac1598
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 03:41:59 2013 -0500
+
+    Little debugging to improve list vs string handling on imports
+
+commit 56c038a0ed03a26ef85dc1264c957cb6d482076c
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Apr 3 03:24:27 2013 -0500
+
+    added acceptance test with correct file name
+
+commit 327c881f0b07e912ba6dc3016b57e55661877a04
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Apr 3 03:21:51 2013 -0500
+
+    acceptance tests almost done, the desctiption for it was changed
+
+commit 771f0044e9875d4c90e820d5a0ef98b2cdd8c933
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Apr 3 02:25:11 2013 -0500
+
+    Import and export of XML to/from MySQL works. Also pretty printing added.
+
+commit c322970152dfc6e26ced1c9f4ac7c2d9e717dcb2
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 2 23:34:23 2013 -0500
+
+    Import facility works
+
+commit d9384c72e3390ffc56bb253ff44e64e79664e3c7
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 2 19:13:16 2013 -0500
+
+    Rough test of the method
+
+commit d5c20836d1c418bb38c77337ad0ce18924a365f2
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 2 19:11:20 2013 -0500
+
+    Rough Test of thte method for imports
+
+commit 32212692b42651471cd2bb574824bd65eeeeee6f
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 2 19:06:58 2013 -0500
+
+    Crises imp/exp
+
+commit c4408f9444ae6890c2b4b31a29d4e722a79db982
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 2 14:03:14 2013 -0500
+
+    Testing login2
+
+commit 42ac9512e376f74cb7796588d4d813ed14b1fac5
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 2 13:59:54 2013 -0500
+
+    Testing login
+
+commit fae76f3010da8534f1b42171809ea0fa299e7cd2
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 2 13:55:45 2013 -0500
+
+    Added login
+
+commit 7478ddedcd45fdc284e86dee5049d425cd355e08
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Apr 2 02:01:25 2013 -0500
+
+    Lab4 starting
+
+commit df39540f5251cfb1be2383df6030a66dc6ca7c6f
+Author: iwo <iwo@cs.utexas.edu>
+Date:   Thu Mar 7 16:43:06 2013 -0600
+
+    Added pydoc
+
+commit 0cfff61c2ac7fd4e9a7c3a9ea059e5b257a58e09
+Author: mduban <iwo@utexas.edu>
+Date:   Thu Mar 7 16:31:47 2013 -0600
+
+    Corrected the naming conention of WCDB1.xsd.xml
+
+commit 0d06c7e9199621a2e17298663385d1fdf56e6191
+Author: mduban <iwo@utexas.edu>
+Date:   Thu Mar 7 16:28:29 2013 -0600
+
+    Added git log
+
+commit aae57b7c738edfc7a81a1108006b575f1ab098e3
+Author: mduban <iwo@utexas.edu>
+Date:   Thu Mar 7 15:42:11 2013 -0600
+
+    Added makefile
+
+commit dbdcfa034a2f6b4505b4595d4d8be5274c191fd7
+Author: mduban <iwo@utexas.edu>
+Date:   Thu Mar 7 15:29:22 2013 -0600
+
+    Added an assertion
+
+commit 46855e0d477cf38b19d6f67e46ca55e3df5d2408
+Merge: 25c816e 0e4fddc
+Author: mduban <iwo@utexas.edu>
+Date:   Thu Mar 7 15:23:09 2013 -0600
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb.git
+
+commit 25c816e580824e40ce03cd7c6d9971f02139b852
+Author: mduban <iwo@utexas.edu>
+Date:   Thu Mar 7 15:22:39 2013 -0600
+
+    Added output of TestWCDB
+
+commit 0e4fddc0a9af4fc9bba67bf10ad5381c1b1665c2
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Thu Mar 7 15:04:47 2013 -0600
+
+    XML and XSD completely done
+
+commit 338df35d6b5a3940e5e61a3ba47bbf0d8cbccc85
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Thu Mar 7 14:44:50 2013 -0600
+
+    All XML data entered. Just need to pull the schema once more and
+    validate.
+
+commit bb30b541573c7398f607720b2c3c5ce121d8344c
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Thu Mar 7 10:02:41 2013 -0600
+
+    10/10 Crises, 7/10 Orgs, 1/10 Ppl
+
+commit 937e9310575407cab4e8d16e8c7ecddd0e513572
+Merge: f520ed8 d9a51cf
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Thu Mar 7 08:58:20 2013 -0600
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb.git
+
+commit f520ed8ef3077014493387cae2170bbb5a28b793
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Thu Mar 7 08:57:54 2013 -0600
+
+    All crises done in XML, on to Orgs and PPL
+
+commit d9a51cf143ddaada93dfc6a987ca0d27bbff17ea
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Mar 6 19:57:29 2013 -0600
+
+    extra commit just in case, had to merge first
+
+commit 4b2586abecca46e5bfa2581e4b62c91885b6e2d4
+Merge: ff823db db9134a
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Mar 6 19:56:04 2013 -0600
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb
+
+commit ff823db0b44ab9256ea8fd0b1ef1eecfbd4d38c4
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Mar 6 19:54:49 2013 -0600
+
+    acceptance tests added
+
+commit db9134a7d2ba43e996c18c2d5316f9d013068944
+Merge: 7c1d54b 02d0e32
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Wed Mar 6 18:43:54 2013 -0600
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb.git
+
+commit 7c1d54b092acb3f7a52fbf1440010e6799a65be2
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Wed Mar 6 18:43:10 2013 -0600
+
+    I've gotten the XML to validate with the XSD. Only 1 entry for each
+    category so far. Adding more now.
+
+commit 02d0e32ca84f18f552ed685ffb2b4d0b517e651a
+Author: wjg374 <wgenerous@gmail.com>
+Date:   Wed Mar 6 16:09:35 2013 -0600
+
+    Added rest of data (check message for full detail)
+    
+    Added Criseis: Hurricane Andrew, Hurricane Carla, Hurricane Emily,
+    Hurricane Hugo,  2010 Haiti Earthquake,
+    
+    Orgs: American Red Cross, FEMA, National Guard of the United States,
+    Save the Children, The Salvation Army
+    
+    People: Charles Perrin, Gail McGovern, Linda Bond, Wallace Stickney
+    
+    sorry these aren't that original or cool --- hurricanes are very easy
+    and i'm studying for two tests tomorrow
+
+commit a30311fef2dd0bea74e33b65ea03b1d3359a176d
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Mar 6 12:18:03 2013 -0600
+
+    All unit tests done (3 for both print and run)
+
+commit 74c40c3176cae02cb4d8b7e40e4459c56ff4ceac
+Author: mduban <iwo@utexas.edu>
+Date:   Wed Mar 6 12:11:44 2013 -0600
+
+    Unit tests added, comments added
+
+commit fec1e6d58f167964de181e7bf512bca98808f1ff
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Mar 6 02:59:12 2013 -0600
+
+    tested sucessfully, one acceptance test added, 9 more to come
+
+commit ee6a551f16d866b0e09e9af11fefc2c79674bab2
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Mar 6 02:56:03 2013 -0600
+
+    fixed errors
+
+commit 2e3cbfb4cd93536c53a395c159a423aef52480b2
+Author: Carlos <Carlos.balderas@utexas.edu>
+Date:   Wed Mar 6 02:48:07 2013 -0600
+
+    setup for Running acceptance tests; changed structure of WCDB1.py
+
+commit 6ae70888c2a8bc7c8e91db2de771b588294d122e
+Author: wjg374 <wgenerous@gmail.com>
+Date:   Tue Mar 5 22:46:30 2013 -0600
+
+    Seperated 2010 Chile Eearthquake data
+
+commit 9e0f6ef8d9cf52e13100820bc4db7538ff7b378f
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Mar 5 15:55:21 2013 -0600
+
+    Added comments
+
+commit 9a75ce8255ba92296860278e58278407790f70e6
+Author: mduban <iwo@utexas.edu>
+Date:   Tue Mar 5 15:44:39 2013 -0600
+
+    XML import/export facility done
+
+commit 8209cbd8195b9c07c472e6f19f4bce8700b2372a
+Merge: c4b7d8a 997aa9f
+Author: mduban <iwo@utexas.edu>
+Date:   Mon Mar 4 13:35:02 2013 -0600
+
+    Merge branch 'master' of https://github.com/VincentSteil/cs327e-wcdb.git
+
+commit c4b7d8ab7e1ca2f0c8beb2db3c0e7545d98e6063
+Author: mduban <iwo@utexas.edu>
+Date:   Mon Mar 4 13:34:09 2013 -0600
+
+    Began working on XML export/import facility
+
+commit 997aa9f31b8f8ba7d77d20df18fe8889948904fc
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Sun Mar 3 11:51:14 2013 -0600
+
+    CIA and USAF data added
+
+commit 946b65987f74c479b22651c6a24a633977c60060
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Sun Mar 3 11:37:00 2013 -0600
+
+    Dwight_Eisenhower, Joseph_Stalin, Willy_Brandt inserted
+
+commit 1e25b6c9b7b1f484347c5959098ba1a4548346c1
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Sun Mar 3 11:19:19 2013 -0600
+
+    Berlin Blockade and U-2 Incident data
+
+commit d9f3c389f2b11594c3773b20f732b28b92268971
+Author: mduban <iwo@utexas.edu>
+Date:   Sat Mar 2 18:35:20 2013 -0600
+
+    People info added about Sherry Rehman and Ban Ki-moon
+
+commit 936f29858017ae5d9284534f6d46dfa8510363e0
+Author: unknown <Iwo@.(none)>
+Date:   Fri Mar 1 20:35:26 2013 -0600
+
+    Added two more crises and two more organization to later implement in XMLs
+
+commit 02e4fa5ec963e142290fe3afa4f350387cc476de
+Author: wgenerous <wgenerous@gmail.com>
+Date:   Fri Mar 1 16:21:40 2013 -0600
+
+    Create 2010 Chile Earthquake Info
+    
+    will put into XML when I get back
+
+commit 91fd429a07c6bcd34b6fe31e2d5d2aef72d6144d
+Author: VincentSteil <vincent.steil@utexas.edu>
+Date:   Wed Feb 27 11:28:09 2013 -0800
+
+    Initial commit
