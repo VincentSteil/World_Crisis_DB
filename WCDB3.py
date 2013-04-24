@@ -63,10 +63,10 @@ def query (c, s) :
   
 
 # -------------
-# WCDB2_setup
+# WCDB3_setup
 # -------------
 
-def WCDB2_setup(c):
+def WCDB3_setup(c):
   """
   This function sets up the MySQL database that we will use
   c is a mysql connection
@@ -262,10 +262,10 @@ description text NOT NULL
   assert t is None
 
 # -------------
-# WCDB2_import
+# WCDB3_import
 # -------------
 
-def WCDB2_import(c, root):
+def WCDB3_import(c, root):
   """
   This function imports the XML instance to the MySQL database
   c is a mysql connection
@@ -530,10 +530,10 @@ def WCDB2_import(c, root):
     query(c, "insert into PersonKind values " + str(tuple(ret)) + ";")
 
 # -------------
-# WCDB2_export
+# WCDB3_export
 # -------------
 
-def WCDB2_export(c):
+def WCDB3_export(c):
   """
   This function exports the MySQL database to XML file
   c is a mysql connection
@@ -714,10 +714,10 @@ def WCDB2_export(c):
   
 
 # -------------
-# WCDB2_print
+# WCDB3_print
 # -------------
 
-def WCDB2_print(w, tree):
+def WCDB3_print(w, tree):
   """
   This function prints tree to writer w
   w is a writer
@@ -729,30 +729,19 @@ def WCDB2_print(w, tree):
   w.write(woop) #printing to the console
 
 # -------------
-# WCDB2_run
+# WCDB3_run
 # -------------
 
   
-def WCDB2_run(r ,w):
+def WCDB3_run(r ,w):
   """
   This function reads an XML from the input then imports it to MySQL then exports it from MySQL and prints the XML
   r is a reader
   w is a writer
   """
   c=login()
-  WCDB2_setup(c)
-  strr = r.read()
-  assert len(strr)>0
-  strr = strr.replace("&", "&amp;")
-  tree = ET.parse(StringIO(strr)) #importing the XML
-  root = tree.getroot()
-  WCDB2_import(c, root)
-  xx=WCDB2_export(c)
-  WCDB2_print(w, ET.tostring(xx)) #sending tree to the printer
-
-c=login()
-WCDB2_setup(c)
-strr = """ 
+  WCDB3_setup(c)
+  strr = """ 
     <w><Crisis id="ss"><Location><Locality>dd</Locality><Country>USA</Country></Location><HumanImpact><Type>kali</Type><Number>123</Number></HumanImpact><ResourceNeeded>cat</ResourceNeeded><ResourceNeeded>dog</ResourceNeeded>
      <ExternalResources><ImageURL>Bal</ImageURL><MapURL>Cyryl</MapURL></ExternalResources></Crisis>
      <Crisis id="bel"></Crisis>
@@ -761,10 +750,13 @@ strr = """
      <CrisisKind id="a"><Name>Habsburg</Name></CrisisKind>
      </w>
     """
-assert len(strr)>0
-strr = strr.replace("&", "&amp;")
-tree = ET.parse(StringIO(strr)) #importing the XML
-root = tree.getroot()
-WCDB2_import(c, root)
-xx=WCDB2_export(c)
-WCDB2_print(sys.stdout, ET.tostring(xx))
+  #r.read()
+  assert len(strr)>0
+  strr = strr.replace("&", "&amp;")
+  tree = ET.parse(StringIO(strr)) #importing the XML
+  root = tree.getroot()
+  WCDB3_import(c, root)
+  xx=WCDB3_export(c)
+  WCDB3_print(w, ET.tostring(xx)) #sending tree to the printer
+
+   
