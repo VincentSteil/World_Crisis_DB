@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+<WorldCrises>
+	<Crisis crisisIdent="CE2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<Location>
+			<Locality>Location 3 km off the coast of Pelluhue commune in the Maule Region</Locality>
+			<Country>Chile</Country>
+		</Location>
+		<Location>
+			<Country>Chile</Country>
+		</Location>
+		<StartDateTime>
+			<Date>2010-02-27</Date>
+			<Time>00:00:00</Time>
+		</StartDateTime>
+		<EndDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</EndDateTime>
+		<HumanImpact>
+			<Type>Death</Type>
+			<Number>525</Number>
+		</HumanImpact>
+		<EconomicImpact>15000000000</EconomicImpact>
+		<ResourceNeeded>Money</ResourceNeeded>
+		<ResourceNeeded>Foreign Aid</ResourceNeeded>
+		<ResourceNeeded>Temporary Housing</ResourceNeeded>
+		<ExternalResources>
+			<ImageURL>Image URLs http://gaiaworld.wikispaces.com/file/view/2010-Chile-Earthquake-81.jpg/206096962/2010-Chile-Earthquake-81.jpg</ImageURL>
+			<MapURL>http://upload.wikimedia.org/wikipedia/commons/8/8e/2010_Chile_earthquake_epicenter.png</MapURL>
+			<VideoURL>https://www.youtube.com/watch?v=ItkgEkiX-vw</VideoURL>
+		</ExternalResources>
+	</Crisis>
+	<Crisis crisisIdent="OP2012">
+		<Name/>
+		<Kind crisisKindIdent="WAR"/>
+		<StartDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</StartDateTime>
+		<EndDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</EndDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Crisis crisisIdent="NA2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</StartDateTime>
+		<EndDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</EndDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Crisis crisisIdent="EF2013">
+		<Name/>
+		<Kind crisisKindIdent="WAR"/>
+		<StartDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</StartDateTime>
+		<EndDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</EndDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Crisis crisisIdent="SF2010">
+		<Name/>
+		<Kind crisisKindIdent="ND"/>
+		<StartDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</StartDateTime>
+		<EndDateTime>
+			<Date>0000-00-00</Date>
+			<Time>00:00:00</Time>
+		</EndDateTime>
+		<EconomicImpact/>
+		<ExternalResources/>
+	</Crisis>
+	<Organization organizationIdent="HSO">
+		<Name/>
+		<Kind organizationKindIdent="RE"/>
+		<Location>
+			<Locality>London</Locality>
+			<Country>UK</Country>
+		</Location>
+		<Location>
+			<Country>UK</Country>
+		</Location>
+		<History/>
+		<ContactInfo>
+			<Telephone/>
+			<Fax/>
+			<Email/>
+			<PostalAddress>
+				<StreetAddress/>
+				<Locality/>
+				<Region/>
+				<PostalCode/>
+				<Country/>
+			</PostalAddress>
+		</ContactInfo>
+		<ExternalResources>
+			<ImageURL>http://www.livefortheoutdoors.com/upload/536096/Christian-Aid.jpg</ImageURL>
+			<VideoURL>https://www.youtube.com/watch?v=kLBZl4FzOww</VideoURL>
+			<MapURL>https://maps.google.com/maps?q=Christian%20Aid&amp;aq=f&amp;um=1&amp;hl=en&amp;biw=1600&amp;bih=775&amp;ie=UTF-8&amp;sa=N&amp;tab=il</MapURL>
+		</ExternalResources>
+	</Organization>
+	<Person personIdent="SLi">
+		<Name>
+			<FirstName>NULL</FirstName>
+			<LastName>NULL</LastName>
+		</Name>
+		<Kind personKindIdent="PR"/>
+		<Location>
+			<Locality>Santiago</Locality>
+			<Country>Chile</Country>
+		</Location>
+		<ExternalResources>
+			<ImageURL>http://upload.wikimedia.org/wikipedia/commons/c/c8/Michele_Bachelet_%282009%29.jpg</ImageURL>
+			<VideoURL>https://www.youtube.com/watch?v=i8I9w3F753A</VideoURL>
+			<MapURL>https://maps.google.com/maps?hl=en&amp;q=santiago+chile&amp;bav=on.2,or.r_gc.r_pw.r_qf.&amp;biw=1600&amp;bih=775&amp;um=1&amp;ie=UTF-8&amp;sa=N&amp;tab=wl</MapURL>
+			<SocialNetworkURL>https://twitter.com/Bacheletjeria</SocialNetworkURL>
+		</ExternalResources>
+	</Person>
+	<CrisisKind crisisKindIdent="WAR">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<CrisisKind crisisKindIdent="ND">
+		<Name/>
+		<Description/>
+	</CrisisKind>
+	<OrganizationKind organizationKindIdent="RE">
+		<Name/>
+		<Description/>
+	</OrganizationKind>
+	<PersonKind personKindIdent="PR">
+		<Name/>
+		<Description/>
+	</PersonKind>
+</WorldCrises>
